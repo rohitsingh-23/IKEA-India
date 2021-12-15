@@ -1,0 +1,43 @@
+.container{
+    position: relative;
+    height: 600px;
+    width: 70%;
+    margin: 0 auto;
+}
+.crousel_image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.crouselContainer{
+    background-color: red;
+    /* padding: 10px; */
+    height: 100%;
+    position: relative;
+
+}
+.crousel_track{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.crousel_slide{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+.crouselBtn{
+    position: absolute;
+    top: 50%;
+    /* height: 250px; */
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+}
+.goleft{
+    left: -40px;
+}
+.goright{
+    right: -40px;
+}
