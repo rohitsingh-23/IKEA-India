@@ -21,13 +21,33 @@
   .banner img {
     width: 100%;
   }
-  
+  .scroll-main-div{
+    max-height: 700px;
+    border: 1px solid transparent;
+  }
   .scroll-main {
     /* height: 450px; */
     /* width: 100%; */
     display: flex;
     margin-bottom: 100px;
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
+    overflow: auto;
+    padding-bottom: 30px;
+    cursor: grab;
+  }
+  .scroll-main::-webkit-scrollbar{
+    /* width: 4px; */
+    height: 3px;
+    background: #dfdfdf;
+    border-radius: 4px;
+  }
+  .scroll-main:hover::-webkit-scrollbar{
+    height: 5px;
+  }
+  .scroll-main::-webkit-scrollbar-thumb{
+    width: 50px;
+    background-color: black;
+
   }
   
   .img-div {
@@ -103,6 +123,7 @@
   }
   
   .festive {
+    margin-top: 60px;
     border-bottom: 1px solid grey;
     /* height: 740px; */
   }
@@ -311,18 +332,40 @@
   }
   
   .shop {
-    height: 550px;
+    height: 450px;
     margin-top: 60px;
+    /* border: 1px solid red; */
   }
+  
   
   .shop-list {
     display: flex;
-    height: 450px;
+    /* height: 400px; */
+    height: auto;
+    padding-bottom: 25px;
     margin-top: 60px;
     gap: 25px;
     overflow-x: scroll;
   }
-  
+  .shop-list::-webkit-scrollbar{
+    /* width: 4px; */
+    height: 3px;
+    background: #dfdfdf;
+    border-radius: 4px;
+  }
+  .shop-list:hover::-webkit-scrollbar{
+    height: 5px;
+    cursor: grab;
+    /* border: 1px solid red; */
+    /* box-shadow: 1px 1px 10px 1px black; */
+  }
+  .shop-list::-webkit-scrollbar-thumb{
+    width: 50px;
+    background-color: black;
+
+  }
+
+
   #green {
     text-decoration: none;
   }

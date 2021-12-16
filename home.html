@@ -13,11 +13,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./components/side nav/homenav.css">
     <link rel="icon" href="https://www.ikea.com/in/en/static/ikea-logo.f7d9229f806b59ec64cb.svg">
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="./components/login slide/login.css">
+    <link rel="stylesheet" href="./components/side nav/product nav.css">
     <title>IKEA India-Affordable home furniture, designs & ideas - IKEA</title>
     <style>
       .container {
@@ -52,13 +51,6 @@
       .mainnav{
         border: 1px solid red;
       }
-      .loginslide{
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: 20;
-        position: fixed;
-      }
     </style>
   </head>
   <body>
@@ -70,6 +62,9 @@
     </div>
     <!-- left slide home basic -->
      <div id="mainnav"></div>
+
+     <!-- left product slide -->
+     <div id="productNav"></div>
 
      <!-- logim slide -->
      <div class="loginslide"></div>
@@ -87,7 +82,7 @@
         </div>
 
         <!-- scroll main -->
-
+        <div class="scroll-main-div">
         <div class="scroll-main">
           <!-- 1 -->
 
@@ -182,6 +177,7 @@
             <div class="arrow"><img src="./img/arrow.svg" alt="" /></div>
           </div>
         </div>
+      </div>
 
         <!-- Limited festive collections -->
 
@@ -521,7 +517,7 @@
         <div class="shop">
           <h1>Shop products for a more sustainable home</h1>
 
-          <div class="shop-list">
+          <div  id="cshop" class="shop-list">
             <!-- 0 -->
 
             <a href="" id="green">
@@ -853,6 +849,7 @@
         </div>
       </div>
     </div>
+    
   </body>
 </html>
 
@@ -882,13 +879,89 @@
 
   // login slide setup
   document.querySelector(".person").addEventListener("click", function(){
+
+    // document.querySelector("#bordy").style.display = "block"
+
     document.querySelector("#bordy").style.transform = "translateX(0)"
     document.querySelector("#bordy").style.display = "block"
     // document.querySelector("#bordy").style.width= "100%"
   })
   document.querySelector("#cros").addEventListener("click", function(){
+
+    // document.querySelector("#bordy").style.display = "none"
+
     document.querySelector("#bordy").style.transform = "translateX(100%)"
     document.querySelector("#bordy").style.display = "none"
     // console.log(e)
   })
+
+  // product nav append
+  import productnav from "./components/side nav/product nav.js";
+  // console.log(productnav);
+  document.getElementById("productNav").innerHTML = productnav();
+
+  // product nav slide setup
+  let pro = document.getElementById("pro");
+  pro.onclick = ()=>{
+    document.querySelector(".promain").style.transform = "translateX(0px)";
+  }
+  document.querySelector(".proclose").addEventListener("click", ()=>{
+    document.querySelector(".promain").style.transform = "translateX(-100%)";
+  })
+
+
+  let furn = document.getElementById('light');
+  furn.onclick = ()=>{
+    //   console.log("hello")
+    document.querySelector(".promain").style.width = "800px"
+    document.getElementById('sub-menu').style.display = "block";
+    document.querySelector('.procontent-toggle').style.marginLeft = "18%"
+  }
+  let light = document.getElementById('furn');
+  light.onclick = ()=>{
+
+    document.getElementById('sub-menu').innerHTML = `<div class="h1">
+  <h2>Furniture</h2>
+</div>
+<div class="h1-bottom">
+  <p>Shop all</p>
+</div>
+<div class="bottom-most">
+  <p>Gaming furniture
+  </p>
+  <p> <a id="fursets" href="product.html">Furniture sets</a> </p>
+  <p>Beds</p>
+  <p>Sofas & armchairs</p>
+  <p>Bookcase & shelving units</p>
+  <p>Tables & desks</p>
+  <p>Cabinets & cupboards</p>
+  <p>TV & media furniture</p>
+  <p>Chest of drawers & drawer units</p>
+  <p>Wardrobes</p>
+  <p>Chairs</p>
+  <p>Outdoor furniture</p>
+  <p>Sideboards,buffets & console tables</p>
+  <p>Children's furniture</p>
+  <p>Room dividers</p>
+  <p>Trolleys</p>
+  <p>Bar furniture</p>
+  <p>Armchairs & chaise longues</p>
+  <p>Cafe furniture</p>
+  <p>Nursery furniture</p>
+
+</div>`
+    document.querySelector(".promain").style.width = "800px"
+    document.getElementById('sub-menu').style.display = "block";
+    document.querySelector('.procontent-toggle').style.marginLeft = "18%"
+  }
+
+  document.getElementById("logButton").addEventListener("click", ()=>{
+    window.location.href = "login.html"
+  })
+  
+  document.getElementById("homelogin").addEventListener("click", ()=>{
+    window.location.href ="login home.html"
+  })
+  
 </script>
+
