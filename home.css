@@ -380,7 +380,7 @@
     padding-bottom: 50px;
     position: relative;
     /* min-height: 5000px; */
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
   }
   /* .button-ideas{
     border: 1px solid red;
@@ -413,7 +413,7 @@
   }
   
   .idea-image {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     /* width: 478px; */
     height: 500px;
   }
