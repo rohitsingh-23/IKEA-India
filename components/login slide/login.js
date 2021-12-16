@@ -17,7 +17,7 @@ function login(){
      </div>
      <div class = "symb">
          <br>
-         <button class = "gtSym"><img src="https://icon-library.com/images/arrow-text-icon/arrow-text-icon-29.jpg" alt="" width="55%" height="55%"></button>
+         <button id="homelogin" class = "gtSym"><img src="https://icon-library.com/images/arrow-text-icon/arrow-text-icon-29.jpg" alt="" width="55%" height="55%"></button>
      </div>
     </div>
     <hr>

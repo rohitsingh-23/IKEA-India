@@ -7,7 +7,7 @@ function nav(){
       />
     </div>
     <div class="navpd">
-      <p>Products</p>
+      <p id="pro">Products</p>
       <p>Rooms</p>
       <p>New at IKEA</p>
       <p>All offers</p>
@@ -30,5 +30,3 @@ function nav(){
 }
 
 export default nav;
-
-// <div class="person"> Heelo  </div>
