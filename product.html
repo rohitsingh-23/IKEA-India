@@ -7,329 +7,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
     <link rel="icon" href="https://www.ikea.com/in/en/static/ikea-logo.f7d9229f806b59ec64cb.svg">
+    <link rel="stylesheet" href="product.css">
     <title>Furniture sets</title>
-    <style>
-      body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-      }
-      .nav {
-        display: flex;
-        justify-content: space-between;
-        position: relative;
-        left: 7%;
-        width: 93%;
-      }
-      .navlogo {
-        display: flex;
-        align-items: center;
-      }
-      .navpd {
-        display: flex;
-        align-items: center;
-      }
-      .navpd > p {
-        margin: 10px;
-        font-size: 14px;
-        font-weight: 700;
-        color: #111111;
-      }
-      .navs {
-        /* margin-left: -40px;   */
-        display: flex;
-        align-items: center;
-      }
-      .navcamera {
-        margin-left: -40px;
-      }
-      .navsearch {
-        position: relative;
-        left: 40px;
-        z-index: 1;
-      }
-      .navs > input {
-        width: 491px;
-        height: 54px;
-        border-radius: 80px;
-        outline: none;
-        border: none;
-        padding: 10px;
-        padding-left: 50px;
-        background-color: #f5f5f5;
-      }
-      .navs > input::placeholder {
-        /* padding: 20px; */
-      }
-      .navlogin {
-        display: flex;
-        align-items: center;
-        position: relative;
-        right: 17px;
-        padding: 10px;
-      }
-      .navlogin > span {
-        padding: 10px;
-      }
-
-      /* nav finsished */
-
-      /* left start */
-      .directory {
-        display: flex;
-        /* align-items: center; */
-      }
-      .container {
-        position: relative;
-        left: 7%;
-        width: 93%;
-      }
-      .directory > * {
-        font-size: 12px;
-        font-weight: 400;
-        color: #484848;
-      }
-      .arrow {
-        font-size: 12px;
-      }
-      .catname {
-        margin-top: 50px;
-        font-size: 30px;
-        font-weight: 700;
-        color: #111111;
-      }
-      .sets {
-        display: flex;
-        justify-content: space-between;
-      }
-      .setsimg {
-        width: 300px;
-      }
-      .setsname {
-        font-size: 14px;
-        font-weight: 400;
-      }
-      .subtitle > p:first-child {
-        font-size: 24px;
-        font-weight: 700;
-      }
-      .subtitle > p:last-child {
-        font-size: 14px;
-        font-weight: 400;
-        color: #484848;
-        width: 650px;
-      }
-      .function {
-        display: flex;
-        justify-content: space-between;
-      }
-      .leftfunc {
-        display: flex;
-        position: relative;
-      }
-      .leftfunc > button {
-        border-radius: 18px;
-        border: none;
-        display: flex;
-        align-items: center;
-        margin-right: 10px;
-        height: 40px;
-        gap: 10px;
-        padding: 15px;
-        justify-content: space-around;
-        font-size: 12px;
-        font-weight: 700;
-      }
-      .rightfunc {
-        display: flex;
-        margin-top: -15px;
-        align-items: center;
-        margin-right: 10px;
-      }
-      .rightfunc > p {
-        margin-right: 10px;
-        font-size: 12px;
-        color: #929292;
-      }
-      .rightfunc > button {
-        height: 33px;
-        font-weight: 700;
-        font-size: 12px;
-        border: 1px solid rgb(201, 201, 201);
-        background: transparent;
-        border-radius: 5px;
-      }
-
-      /* Dropdown menu things */
-      #sortdrop {
-        position: absolute;
-        top: 55px;
-        display: grid;
-        width: 300px;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        background-color: white;
-        border-radius: 15px;
-        height: 500px;
-        overflow-y: scroll;
-        display: none;
-        z-index: 1;
-      }
-      #sortdrop > div {
-        display: grid;
-        grid-template-columns: 80% 20%;
-        justify-content: space-around;
-        padding: 15px;
-      }
-      #sortdrop label {
-        font-size: 14px;
-        color: #484848;
-      }
-      /* Category dropDown */
-      #catdrop {
-        position: absolute;
-        left: 95px;
-        top: 55px;
-        display: grid;
-        width: 300px;
-        height: 250px;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        background-color: white;
-        border-radius: 15px;
-        overflow-y: scroll;
-        display: none;
-        z-index: 1;
-      }
-      #catdrop > div,
-      #seatsdrop > div,
-      #pricedrop > div,
-      #matdrop > div {
-        display: grid;
-        grid-template-columns: 80% 20%;
-        justify-content: space-around;
-        padding: 15px;
-      }
-      #catdrop label,
-      #seatsdrop label,
-      #pricedrop label,
-      #matdrop label {
-        font-size: 14px;
-        color: #484848;
-      }
-      /*Number of Seats drop */
-      #seatsdrop {
-        position: absolute;
-        left: 225px;
-        top: 55px;
-        display: grid;
-        width: 300px;
-        height: 150px;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        background-color: white;
-        border-radius: 15px;
-        overflow-y: scroll;
-        display: none;
-        z-index: 1;
-      }
-      /* price drop */
-      #pricedrop {
-        position: absolute;
-        left: 390px;
-        top: 55px;
-        display: grid;
-        width: 300px;
-        height: 200px;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        background-color: white;
-        border-radius: 15px;
-        overflow-y: scroll;
-        display: none;
-        z-index: 1;
-      }
-      /* material drop */
-      #matdrop {
-        position: absolute;
-        left: 495px;
-        top: 55px;
-        display: grid;
-        width: 300px;
-        height: 200px;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        background-color: white;
-        border-radius: 15px;
-        overflow-y: scroll;
-        display: none;
-        z-index: 1;
-      }
-      /* Mapping products from data  */
-      .products {
-        display: grid;
-        grid-template-columns: repeat(4, 22%);
-        gap: 2% 4%;
-        z-index: -1;
-      }
-      #box {
-        position: relative;
-        /* border: 1px solid blue; */
-      }
-      #img1 {
-        /* position: absolute; */
-        top: 0;
-        width: 100%;
-        border: 1px solid transparent;
-
-      }
-      #img2 {
-        position: absolute;
-        top: 0;
-        width: 100%;
-        border: 1px solid white;
-      }
-      #img2:hover{
-         display: none;
-       }
-      #title {
-        margin: 0;
-        padding: 0;
-        font-size: 14px;
-        font-weight: 700;
-      }
-      #des {
-        margin: 0;
-        padding: 0;
-        font-size: 14px;
-        font-weight: 400;
-        color: #484848;
-      }
-      #pdiv {
-        margin-top: 3px;
-        padding: 0;
-        display: flex;
-        align-items: baseline;
-      }
-      #rs {
-        margin: 0;
-        padding: 0;
-        font-size: 11px;
-        font-weight: 700;
-      }
-      #proprice {
-        margin: 0;
-        padding: 0;
-        font-size: 22px;
-        font-weight: 700;
-      }
-      /* left nav bar */
-      .left{
-        position: relative;
-        top: 0;
-        width: 6%;
-        height: 100%;
-        position: fixed;
-        /* border: 1px solid red; */
-      }
-      .line3{
-        margin: 30%;
-      }
-    </style>
   </head>
   <body>
     <div class="nav">
@@ -439,15 +118,15 @@
           <div id="sortdrop">
             <div>
               <label for="mattch">Best match</label>
-              <input type="radio" name="match" checked />
+              <input id="matchCall" type="radio" name="match" checked />
             </div>
             <div>
               <label for="mattch">Price: low to high</label>
-              <input type="radio" name="match" />
+              <input id="low" type="radio" name="match" />
             </div>
             <div>
               <label for="mattch">Price: high to low</label>
-              <input type="radio" name="match" />
+              <input id="high" type="radio" name="match" />
             </div>
             <div>
               <label for="mattch">Newest</label>
@@ -545,23 +224,23 @@
           <div id="pricedrop">
             <div>
               <label for="9999">₹0 - 9,999</label>
-              <input type="checkbox" name="9999" />
+              <input name="p0" type="checkbox" />
             </div>
             <div>
               <label for="9999">₹10,000 - 19,999</label>
-              <input type="checkbox" name="9999" />
+              <input name="p10000" type="checkbox"/>
             </div>
             <div>
               <label for="9999">₹20,000 - 29,999</label>
-              <input type="checkbox" name="9999" />
+              <input name="p20000" type="checkbox" />
             </div>
             <div>
               <label for="9999">₹30,000 - 39,999</label>
-              <input type="checkbox" name="9999" />
+              <input name="p30000" type="checkbox"  />
             </div>
             <div>
               <label for="9999">₹40,000+</label>
-              <input type="checkbox" name="9999" />
+              <input name="p40000" type="checkbox"  />
             </div>
           </div>
 
@@ -1012,23 +691,18 @@
     },
   ];
 
-  let namedef = [{
-    img1: "https://www.ikea.com/in/en/images/products/pax-wardrobe-black-brown-mehamn-black-brown-stained-ash-effect__0716359_pe730830_s5.jpg?f=xxs",
-    img2: "https://www.ikea.com/in/en/images/products/pax-wardrobe-black-brown-mehamn-black-brown-stained-ash-effect__0716358_pe730831_s5.jpg?f=xxs",
-    title: "PAX",
-    des: "Wardrobe 150x66x236 cm (59x26x93 1/8)",
-    price: 42250,
-    varient: false,
-  }];
-
   // mapping data to page
   display(data);
   function display(arr) {
     var products = document.querySelector(".products");
+    products.innerHTML = null
     arr.forEach((item, index) => {
       // console.log(item)
       let box = document.createElement("div");
       box.id = "box";
+      box.addEventListener("click", ()=>{
+        goto(index)
+      })
       let img1 = document.createElement("img");
       img1.id = "img1";
       img1.src = item.img2;
@@ -1054,4 +728,122 @@
       products.append(box);
     });
   }
+
+  function goto(index){
+    if(index==2){
+      window.location.href = "table.html"
+    }
+  }
+
+  document.querySelector(".navlogo").addEventListener("click", ()=>{
+    window.location.href = "home.html"
+  })
+  
+  document.getElementById("low").addEventListener("click", ()=>{
+    // let data1 = [{...data}]
+    let data1 = [...data]
+    // console.log(data1)
+    data1 = data1.sort((a,b)=>{
+      return a.price - b.price
+    })
+    display(data1)
+  })
+
+  document.getElementById("high").addEventListener("click", ()=>{
+    let data2 = [...data]
+    data2 = data2.sort((a,b)=>{
+      return b.price - a.price
+    })
+    display(data2)
+  })
+
+  document.getElementById("matchCall").addEventListener("click", ()=>{
+    // let data2 = data.sort((a,b)=>{
+    //   return b.price - a.price
+    // })
+    console.log("Hello")
+    console.log(data)
+    display(data)
+  })
+
+  document.querySelector("input[name=p0]").addEventListener("change", function(){
+    // console.log("Hell")
+    if(this.checked){
+      let data1 = [...data];
+      data1 = data1.filter((item)=>{
+        if(item.price>0 && item.price<=9999){
+          return item;
+        }
+      })
+      console.log(data)
+      display(data1)
+    }else{
+      display(data)
+    }
+  });
+
+  document.querySelector("input[name=p10000]").addEventListener("change", function(){
+    // console.log("Hell")
+    if(this.checked){
+      let data1 = [...data];
+      data1 = data1.filter((item)=>{
+        if(item.price>=10000 && item.price<=19999){
+          return item;
+        }
+      })
+      console.log(data)
+      display(data1)
+    }else{
+      display(data)
+    }
+  });
+
+  document.querySelector("input[name=p20000]").addEventListener("change", function(){
+    // console.log("Hell")
+    if(this.checked){
+      let data1 = [...data];
+      data1 = data1.filter((item)=>{
+        if(item.price>=20000 && item.price<=29999){
+          return item;
+        }
+      })
+      console.log(data)
+      display(data1)
+    }else{
+      display(data)
+    }
+  });
+
+  document.querySelector("input[name=p30000]").addEventListener("change", function(){
+    // console.log("Hell")
+    if(this.checked){
+      let data1 = [...data];
+      data1 = data1.filter((item)=>{
+        if(item.price>=30000 && item.price<=39999){
+          return item;
+        }
+      })
+      console.log(data)
+      display(data1)
+    }else{
+      display(data)
+    }
+  });
+
+  document.querySelector("input[name=p40000]").addEventListener("change", function(){
+    // console.log("Hell")
+    if(this.checked){
+      let data1 = [...data];
+      data1 = data1.filter((item)=>{
+        if(item.price>=40000 ){
+          return item;
+        }
+      })
+      console.log(data)
+      display(data1)
+    }else{
+      display(data)
+    }
+  });
+  
 </script>
