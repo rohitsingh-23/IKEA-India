@@ -24,7 +24,7 @@ function nav(){
     <div class="navlogin">
       <span class="material-icons-outlined"> local_shipping </span>
       <span class="material-icons-outlined person"> person_outline </span>
-      <span class="material-icons-outlined"> shopping_basket</span>
+      <span class="material-icons-outlined" id="gocart"> shopping_basket</span>
     </div>
   </div>`
 }
