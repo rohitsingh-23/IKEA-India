@@ -3,15 +3,19 @@ var cart_local = JSON.parse(localStorage.getItem("cart-item1"));
 console.log(cart_local.length);
 
 console.log(cart_local);
+  display(cart_local)
 
-var cart_details = document.createElement("div");
+  
+function display(arr){
+  arr.forEach((item)=>{
+    var cart_details = document.createElement("div");
 cart_details.setAttribute("class", "cart-details");
 
 var img_cart = document.createElement("div");
 img_cart.setAttribute("class", "img-cart");
 
 var img = document.createElement("img");
-img.src = cart_local.img;
+img.src = item.img;
 
 //apeending cart img
 
@@ -23,22 +27,22 @@ var item_details = document.createElement("div");
 item_details.setAttribute("class", "item-details");
 
 var title = document.createElement("p");
-title.innerText = cart_local.title;
+title.innerText = item.title;
 
 var set = document.createElement("p");
-set.innerText = cart_local.set;
+set.innerText = item.set;
 
 var color = document.createElement("p");
-color.innerText = cart_local.color;
+color.innerText = item.color;
 
 var dimension = document.createElement("p");
-dimension.innerText = cart_local.dimension;
+dimension.innerText = item.dimension;
 
 var random = document.createElement("p");
-random.innerText = cart_local.random;
+random.innerText = item.random;
 
 var weight = document.createElement("p");
-weight.innerText = cart_local.weight;
+weight.innerText = item.weight;
 
 //appending item details
 
@@ -52,10 +56,17 @@ price_item.setAttribute("class", "price-item");
 var price = document.createElement("p");
 
 var delete_button = document.createElement("div");
+
 delete_button.setAttribute("class", "delete-button");
 
 var delete_img = document.createElement("img");
 delete_img.src = "./delete.png";
+// delete_img.addEventListener("click", ()=>{
+//   console.log(event);
+//   let path = event.path[3].innerText
+//   console.log(path.split(" "));
+  
+// })
 
 var select = document.createElement("select");
 
@@ -109,18 +120,18 @@ delete_button.append(delete_img, select);
 
 //weight appending
 
-document.getElementById("weight").innerText = cart_local.weight;
+document.getElementById("weight").innerText = item.weight;
 document.getElementById("rmg-weight").innerText = `${
-  500 - cart_local.weight1
+  500 - item.weight1
 } kg`;
 
 //appending price
 
-price.innerText = cart_local.price;
-document.getElementById("prc-cart").innerText = cart_local.price;
+price.innerText = item.price;
+document.getElementById("prc-cart").innerText = item.price;
 
 select.addEventListener("change", function () {
-  var newPrice = cart_local.price1 * select.value;
+  var newPrice = item.price1 * select.value;
   price.innerText = `Rs. ${newPrice
     .toFixed(2)
     .replace(/\d(?=(\d{3})+\.)/g, "$&,")}`;
@@ -130,10 +141,10 @@ select.addEventListener("change", function () {
     .replace(/\d(?=(\d{3})+\.)/g, "$&,")}`;
 
   document.getElementById("weight").innerText = `${Math.round(
-    cart_local.weight1 * select.value
+    item.weight1 * select.value
   )} kg total`;
 
-  var remain = Math.round(300 - cart_local.weight1 * select.value);
+  var remain = Math.round(300 - item.weight1 * select.value);
 
   document.getElementById("rmg-weight").innerText = `${remain} kg`;
 
@@ -152,3 +163,6 @@ cart_details.append(img_cart, item_details, price_item);
 
 document.getElementById("main-wala").append(cart_details);
 // main.append(cart_details);
+
+  })
+}

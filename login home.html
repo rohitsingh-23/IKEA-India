@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
     <link rel="icon" href="https://www.ikea.com/in/en/static/ikea-logo.f7d9229f806b59ec64cb.svg">
+    <link rel="stylesheet" href="./components/login slide/login.css">
+    <link rel="icon" href="https://www.ikea.com/in/en/static/ikea-logo.f7d9229f806b59ec64cb.svg">
     <title>User Account</title>
     <style>
         body{
@@ -88,13 +90,72 @@
             border-radius: 20px;
             font-size: 15px;
             border: none;
+            cursor: pointer;
+        }
+        #crProfile:hover{
+            background-color: rgb(38, 37, 37);
         }
         
+        .left{
+        position: relative;
+        top: 25px;
+        left: 50px;
+        width: 6%;
+        height: 100%;
+        position: fixed;
+        /* border: 1px solid red; */
+      }
+        input[type="checkbox"] {
+        width: 1.15em;
+        height: 1.15em;
+        border-radius: 40px;
+      }
+      input[type="radio"] {
+          /* height: 40px; */
+        border-radius: 40px;
+      }
+      #bcheck{
+          width: 20px;
+          height: 20px;
+      }
 
+      /* Radio style */
+      /* .bradio  input[type="radio"] {
+    display: none;
+  }
+  .bradio input[type="radio"] + *::before {
+    content: "";
+    display: inline-block;
+    vertical-align: bottom;
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.3rem;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: gray;
+  }
+  .bradio input[type="radio"]:checked + *::before {
+    background: radial-gradient(black 0%, black 40%, transparent 50%, transparent);
+    border-color: black;
+  }
+  .bradio input[type="radio"]:checked + * {
+    color: black;
+  } */
+      
     </style>
 </head>
 <body>
     <div id="tnav"></div>
+
+    <!-- left nav -->
+    <div class="left">
+        <div><span class="material-icons-outlined line3">menu</span></div>
+      </div>
+
+
+    <!-- logim slide -->
+    <div class="loginslide"></div>
 
     <div>
         <div id = "leftLogi">
@@ -133,63 +194,68 @@
             <br><br><br><br><br>
             <div class = "texts">Become a member of IKEA Family today. Did we <br>mention it's free to join?</div>
             <br>
-            <form>
-                <input type="radio" checked>
+            <form ><label class="bradio" for="">
+
+                <input  type="radio" checked>
+            </label>
                 <label class = "usText">Yes, I want to enjoy rewards, discounts and a lot more! 
                    <u> Get the details</u></label>
                     <br><br>
-                    <input type="radio">
+                    <label class="bradio" for="">
+
+                        <input type="radio">
+                    </label>
                     <label class = "usText">No thanks, I just want to create an IKEA account today. Maybe another day. 
                        <u> Get the details</u></label>
             </form>
 <br><br>
-            <input type="text" placeholder="First Name" class = "Inputs">
+            <input id="name" type="text" placeholder="First Name" class = "Inputs" required>
             <br><br><br>
-            <input type="text" placeholder="Surname" class = "Inputs">
+            <input id="sur" type="text" placeholder="Surname" class = "Inputs" required>
             <br><br><br>
             <div id = "mobile">Mobile</div>
-            <input type="text" class = "Inputs" placeholder="IN (+91)">
+            <input id="mob" type="text" class = "Inputs" placeholder="IN (+91)" required>
             <br><br><br>
-            <input type="text" class = "Inputs" placeholder="Birthdate">
+            <input id="birth" type="text" class = "Inputs" placeholder="Birthdate">
             <br><br><br>
-            <select name="" id="" class="Inputs" style="width: 300px; color: grey; outline: none;">
-                <option value="">Gender</option>
+            <select id="gen" name="" id="" class="Inputs" style="width: 300px; color: grey; outline: none;">
+                <option value="gender">Gender</option>
                 <option value="">Male</option>
                 <option value="">Female</option>
             </select>
             <div class = "ussText">We require this field in order to best personalize communication & <br>marketing material and understand our users better.</div>
             <br><br><br>
-            <input type="text" class = "Inputs" placeholder="Post code" style="width: 300px;">
+            <input id="post" type="text" class = "Inputs" placeholder="Post code" style="width: 300px;">
             <br><br><br>
-            <select name="" id="" class="Inputs" style="width: 300px; color: grey; outline: none;">
-                <option value="">Preferred store</option>
+            <select name="" id="location" class="Inputs" style="width: 300px; color: grey; outline: none;">
+                <option value="prefe">Preferred store</option>
                 <option value="">Hydrabad store</option>
                 <option value="">Navi Mumbai store</option>
                 <option value="">Online store</option>
                 <option value="">Worli store</option>
             </select>
             <br><br><br>
-            <input type="text" class="Inputs" placeholder="Email(username)">
+            <input id="username" type="text" class="Inputs" placeholder="Email(username)">
             <br><br><br>
-            <input type="password" placeholder="Password" class = "Inputs" style="width: 300px;" >
+            <input id="password" type="password" placeholder="Password" class = "Inputs" style="width: 300px;" >
             <br><br>
             <form action="">
                 <br>
-                <input type="checkbox" checked><label for=""> I would like to receive news, tips and marketing offers from IKEA.</label>
+                <input id="bcheck" type="checkbox" checked><label for=""> I would like to receive news, tips and marketing offers from IKEA.</label>
             </form>
             <div id = "checkBoxs">
                 <br>
                 <form action="">
-                    <input type="checkbox" checked><label for="">Via Email</label><br>
+                    <input id="bcheck" type="checkbox" checked><label for="">Via Email</label><br>
                     <br>
-                    <input type="checkbox" checked><label for="">Via SMS</label><br><br>
+                    <input id="bcheck" type="checkbox" checked><label for="">Via SMS</label><br><br>
 
-                    <input type="checkbox" checked><label for="">Via direct mail</label>
+                    <input id="bcheck" type="checkbox" checked><label for="">Via direct mail</label>
                 </form>
             </div>
             <form action="">
                 <br><br>
-                <input type="checkbox"><label for="">I have read and understood the <u>Terms & Conditions</u> and <u>Privacy Policy.</u></label>
+                <input id="bcheck" id="term" type="checkbox"><label for="">I have read and understood the <u>Terms & Conditions</u> and <u>Privacy Policy.</u></label>
                 </form>
                 <br><br>
                 <button id = "crProfile">Create profile</button>
@@ -205,4 +271,105 @@
   document.querySelector(".navlogo").addEventListener("click", ()=>{
     window.location.href = "home.html"
   })
+
+  document.querySelector("#crProfile").addEventListener("click", check);
+
+  function check(){
+      let name = document.getElementById("name").value;
+      let sur = document.getElementById("sur").value;
+      let mobile = document.getElementById("mob").value;
+    let birth = document.getElementById("birth").value;
+    let gen = document.getElementById("gen").value;
+    let post = document.getElementById("post").value;
+    let location = document.getElementById("location").value;
+    let username = document.getElementById("username").value;
+    let pass= document.getElementById("password");
+    let term = document.getElementById("term").value
+    console.log(term)
+
+
+    if(name.length==0){
+        alert("Input Valid Name")
+    }else if(sur.length ==0 ){
+        alert("Input Valid Surname")
+    }else if(mobile.length == 0){
+        alert("Input Valid Mobile Number")
+    }else if(birth.length == 0){
+        alert("Input valid Date of Birth")
+    }else if (gen == "gender"){
+        alert("Please select gender")
+    }else if(post.length == 0){
+        alert("Input Valid pincode")
+    }else if(location == "prefe"){
+        alert("Select location")
+    }else if(username.length == 0){
+        alert("Input valid username")
+    }else if(pass.length == 0){
+        alert("Input valid password")
+    }else{
+        register()
+    }
+
+    // register()
+
+  }
+
+
+  async function register() {
+    event.preventDefault();
+    console.log("Hello");
+
+    let user_data = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("username").value,
+      password: document.getElementById("password").value,
+      username: document.getElementById("username").value,
+      mobile: document.getElementById("mob").value,
+      description: "dummy"
+    };
+
+    user_data = JSON.stringify(user_data);
+    // console.log(user_data)
+
+    let register_api = `https://masai-api-mocker.herokuapp.com/auth/register`;
+
+    let response = await fetch(register_api, {
+      method: "POST",
+      body: user_data,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    let data = await response.json();
+    console.log(data)
+    if(data.error==true){
+        alert(`${data.message}`)
+    }else{
+        alert(`${data.message}`)
+    }
+  }
+
+  // login slide append;
+  import login from "./components/login slide/login.js"
+  document.querySelector(".loginslide").innerHTML = login();
+
+  // login slide setup
+  document.querySelector(".person").addEventListener("click", function(){
+
+    // document.querySelector("#bordy").style.display = "block"
+
+    document.querySelector("#bordy").style.transform = "translateX(0)"
+    // document.querySelector("#bordy").style.display = "block"
+    // document.querySelector("#bordy").style.width= "100%"
+  })
+  document.querySelector("#cros").addEventListener("click", function(){
+
+    // document.querySelector("#bordy").style.display = "none"
+
+    document.querySelector("#bordy").style.transform = "translateX(100%)"
+    // document.querySelector("#bordy").style.display = "none"
+    // console.log(e)
+  })
+
 </script>
