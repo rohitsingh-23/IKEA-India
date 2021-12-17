@@ -1,4 +1,5 @@
-var cart_local = JSON.parse(localStorage.getItem("cart-item1"));
+var cart_local = JSON.parse(localStorage.getItem("cart-item1")) || [];
+var update_price = {};
 
 console.log(cart_local.length);
 
@@ -152,3 +153,10 @@ cart_details.append(img_cart, item_details, price_item);
 
 document.getElementById("main-wala").append(cart_details);
 // main.append(cart_details);
+
+document.getElementById("gocheck").addEventListener("click", () => {
+  update_price.price = document.getElementById("prc-cart").innerText;
+  console.log(update_price);
+  localStorage.setItem("price", JSON.stringify(update_price));
+  window.location.href = "./checkout/checkout.html";
+});
