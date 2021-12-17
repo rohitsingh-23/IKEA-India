@@ -20,6 +20,7 @@
   transform-origin: left;
   transition: transform 500ms ease-in;
 }
+
 .logo1 > img {
   width: 90px;
   margin-left: 15px;
@@ -100,6 +101,7 @@ h1:hover,
 p:hover {
   text-decoration: underline;
 }
+
 .globe {
   height: 30px;
   width: 145px;
@@ -111,10 +113,12 @@ p:hover {
   border: 1px solid #484848;
   margin-top: 10px;
 }
+
 .gicon {
   font-size: 20px;
   margin-right: 8px;
 }
+
 .globe > p {
   font-size: 14px;
   font-weight: 700;
