@@ -4,18 +4,36 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./components/navbar/nav.css" />
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
     <link rel="stylesheet" href="table.css" />
-    <link rel="stylesheet" href="./components/Product review/review.css">
-    <link rel="stylesheet" href="./components/Product review/measurement.css">
-    <script src="https://kit.fontawesome.com/07381c3866.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./components/Product review/product.css">
-    <link rel="stylesheet" href="./components/footer/footer.css">
-    <script src="https://kit.fontawesome.com/07381c3866.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./components/Product review/review.css" />
+    <link rel="stylesheet" href="./components/Product review/measurement.css" />
+    <script
+      src="https://kit.fontawesome.com/07381c3866.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./components/Product review/product.css" />
+    <link rel="stylesheet" href="./components/footer/footer.css" />
+    <script
+      src="https://kit.fontawesome.com/07381c3866.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Table</title>
     <style></style>
   </head>
@@ -162,7 +180,7 @@
           <br /><br />
           <div>
             <div class="headBut">
-              <p >Reviews</p>
+              <p>Reviews</p>
               <div id="creview" class="arrow">
                 <ion-icon name="arrow-forward-outline"></ion-icon>
               </div>
@@ -284,88 +302,87 @@
 
   let localdata = JSON.parse(localStorage.getItem("cart-item1")) || [];
 
-  var data = 
-    {
-      title: "MELLTORP / ADDE",
-      set: "Table and 4 chairs",
-      color: "white, white black",
-      dimension: '125x75 cm (49 1/4x29 1/2")',
-      random: "692.463.73",
-      weight: "32.76 kg per peice",
-      weight1: 32.76,
-      img: "https://secure.ikea.com/in/en/images/products/mell…rp-adde-table-and-chairs__0445221_PE595674_S3.JPG",
-      price: "Rs.6,390.00",
-      price1: 6390,
-    }
+  var data = {
+    title: "MELLTORP / ADDE",
+    set: "Table and 4 chairs",
+    color: "white, white black",
+    dimension: '125x75 cm (49 1/4x29 1/2")',
+    random: "692.463.73",
+    weight: "32.76 kg per peice",
+    weight1: 32.76,
+    img: "https://secure.ikea.com/in/en/images/products/mell…rp-adde-table-and-chairs__0445221_PE595674_S3.JPG",
+    price: "Rs.6,390.00",
+    price1: 6390,
+  };
 
   var gotocart = document.getElementById("butCart");
 
   gotocart.addEventListener("click", () => {
-    
     var chair = document.getElementById("prTitles").innerText;
-    if (chair === "MELLTORP / ADDE") {
-      console.log(data[0]);
-      localdata.push(data);
-      localStorage.setItem("cart-item1", JSON.stringify(localdata));
-    }
-    alert("Item added successfully")
+
+    localdata.push(data);
+    localStorage.setItem("cart-item1", JSON.stringify(localdata));
+
+    alert("Item added successfully");
   });
 
   document.getElementById("gocart").addEventListener("click", () => {
     window.location.href = "cart.html";
   });
 
-  import review from "./components/Product review/review.js"
+  import review from "./components/Product review/review.js";
   // console.log(review)
   document.getElementById("preview").innerHTML = review();
-  
+
   let creview = document.getElementById("creview");
-  console.log(creview)
-  creview.onclick = ()=>{
-    console.log("Hello")
-    document.getElementById("mainreview").style.transform = "translateX(0)"
-    document.querySelector("body").style.overflow = "hidden"
-  }
+  console.log(creview);
+  creview.onclick = () => {
+    console.log("Hello");
+    document.getElementById("mainreview").style.transform = "translateX(0)";
+    document.querySelector("body").style.overflow = "hidden";
+  };
 
-  document.getElementById("ciross").addEventListener("click", ()=>{
-    document.getElementById("mainreview").style.transform = "translateX(100%)"
-    document.querySelector("body").style.overflow = "scroll"
-  })
+  document.getElementById("ciross").addEventListener("click", () => {
+    document.getElementById("mainreview").style.transform = "translateX(100%)";
+    document.querySelector("body").style.overflow = "scroll";
+  });
 
-  import {measurement , product} from "./components/Product review/measurement.js"
+  import {
+    measurement,
+    product,
+  } from "./components/Product review/measurement.js";
   document.getElementById("pmeasure").innerHTML = measurement();
-
 
   // measurement script
   var dropdown = document.getElementsByClassName("dropdown-btn");
-var i;
+  var i;
 
-for (i = 0; i < dropdown.length; i++) {
-  dropdown[i].addEventListener("click", function() {
-    // this.classList.toggle("active");
-    var dropdownContent = this.nextElementSibling;
-    if (dropdownContent.style.display === "block") {
-      dropdownContent.style.display = "none";
-    } else {
-      dropdownContent.style.display = "block";
-    }
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function () {
+      // this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+      } else {
+        dropdownContent.style.display = "block";
+      }
+    });
+  }
+
+  document.getElementById("omeasure").addEventListener("click", () => {
+    document.getElementById("meas-nav").style.transform = "translateX(0)";
+    document.querySelector("body").style.overflow = "hidden";
   });
-}
-
-document.getElementById("omeasure").addEventListener("click", ()=>{
-  document.getElementById("meas-nav").style.transform = "translateX(0)"
-  document.querySelector("body").style.overflow = "hidden"
-})
-document.querySelector(".mclose").addEventListener("click", ()=>{
+  document.querySelector(".mclose").addEventListener("click", () => {
     // document.querySelector(".main").style.display = "none";
     // document.querySelector(".main").style.transform = "scaleX(0)";
     document.querySelector("#meas-nav").style.transform = "translateX(100%)";
-    document.querySelector("body").style.overflow = "scroll"
-  })
+    document.querySelector("body").style.overflow = "scroll";
+  });
 
   // product
- document.getElementById("pproduct").innerHTML = product()
- var dropdown = document.getElementsByClassName("pdropdown-btn");
+  document.getElementById("pproduct").innerHTML = product();
+  var dropdown = document.getElementsByClassName("pdropdown-btn");
   var i;
 
   for (i = 0; i < dropdown.length; i++) {
@@ -380,17 +397,17 @@ document.querySelector(".mclose").addEventListener("click", ()=>{
     });
   }
 
-  document.getElementById("proarrow").addEventListener("click", ()=>{
+  document.getElementById("proarrow").addEventListener("click", () => {
     console.log("Hello");
-    document.querySelector(".psidenav").style.transform = "translateX(0)"
-    document.querySelector("body").style.overflow = "hidden"
-  })
+    document.querySelector(".psidenav").style.transform = "translateX(0)";
+    document.querySelector("body").style.overflow = "hidden";
+  });
 
-  document.querySelector(".pclose").addEventListener("click", ()=>{
-    document.querySelector(".psidenav").style.transform = "translateX(100%)"
-    document.querySelector("body").style.overflow = "scroll"
-  })
+  document.querySelector(".pclose").addEventListener("click", () => {
+    document.querySelector(".psidenav").style.transform = "translateX(100%)";
+    document.querySelector("body").style.overflow = "scroll";
+  });
   // footer part
-  import footer from "./components/footer/footer.js"
+  import footer from "./components/footer/footer.js";
   document.getElementById("footer").innerHTML = footer();
 </script>
