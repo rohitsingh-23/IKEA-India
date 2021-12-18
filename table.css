@@ -177,6 +177,10 @@ border: none;
  height: 40px;
 
 }
+#butCart:hover{
+  cursor: pointer;
+  background-color: #004887;
+}
 #footer{
   margin-top: 55px;
 }

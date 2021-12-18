@@ -2,7 +2,7 @@ function login(){
     return `<div id = "bordy">
     <div id = "uppro">
         <br>
-      <button id = "cros">✕</button>
+      <div id = "crossb"><button id = "cros">✕</button></div>
       <br><br><br><br>
         <div class = "textBut">Hej</div>
       <div class = "textBut"><button id = "logButton">Log in</button></div>
@@ -10,10 +10,10 @@ function login(){
 <br>
         <div>
      <div class = "tex">
-        <a>
+        
          <div class = "heady">Join IKEA Family</div>
          <div class = "pery">Get access to a number of member benefits. Enjoy <br>guaranteed discounts, free workshops, exclusive previews <br>and a lot more when you join. Its free!</div>
-            </a>
+            
      </div>
      <div class = "symb">
          <br>

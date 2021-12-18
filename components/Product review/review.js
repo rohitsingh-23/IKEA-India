@@ -2,7 +2,7 @@ function review(){
     return `<div id = "mainreview">
     <div id="forBut">
         <br>
-        <button id="ciross">✖</button>
+        <div id="cclose"><button id="ciross">✖</button></div>
     </div>
 
 

@@ -26,6 +26,7 @@
       src="https://kit.fontawesome.com/07381c3866.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="./components/side nav/homenav.css">
     <title>Table</title>
     <style>
       #container {
@@ -178,6 +179,10 @@
         height: 40px;
         cursor: pointer;
       }
+      #butCart:hover{
+        cursor: pointer;
+        background-color: #004887;
+      }
       #text1 {
         font-size: 20px;
         color: darkgray;
@@ -201,6 +206,11 @@
   </head>
   <body>
     <div id="tnav"></div>
+
+    <!-- left slide home basic -->
+    <div id="mainnav"></div>
+
+
     <div class="left">
       <div><span class="material-icons-outlined line3">menu</span></div>
     </div>
@@ -456,4 +466,24 @@
     console.log(localdata);
     alert("Item added successfully");
   });
+  // goto cart
+  document.getElementById("gocart").onclick = ()=>{
+    window.location.href = "cart.html"
+  }
+
+  // slide home setup
+  import left from "./components/side nav/homenav.js"
+  // console.log(left);
+  document.getElementById("mainnav").innerHTML = left();
+
+  document.querySelector(".line3").addEventListener("click", ()=>{
+    // document.querySelector(".main").style.display = "block";
+    // document.querySelector(".main").style.transform = "scaleX(1)";
+    document.querySelector(".main").style.transform = "translateX(0px)";
+  })
+  document.querySelector(".close").addEventListener("click", ()=>{
+    // document.querySelector(".main").style.display = "none";
+    // document.querySelector(".main").style.transform = "scaleX(0)";
+    document.querySelector(".main").style.transform = "translateX(-100%)";
+  })
 </script>

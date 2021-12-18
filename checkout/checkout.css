@@ -132,6 +132,14 @@ h2 {
 .main-product {
   border: 1px solid grey;
   margin-top: 20px;
+  /* height: 150px; */
+  /* display: flex; */
+  justify-content: space-between;
+}
+
+#list {
+  border: 1px solid grey;
+  margin-top: 20px;
   height: 150px;
   display: flex;
   justify-content: space-between;
@@ -162,7 +170,7 @@ h2 {
 #imgDiv {
   height: 100%;
   border: 1px solid blue;
-  margin-left: -150px;
+  margin-left: -90px;
 }
 
 #imgDiv img {
@@ -171,7 +179,7 @@ h2 {
 
 #des {
   width: 35%;
-  margin-left: -150px;
+  margin-left: -90px;
   border: 1px solid red;
 }
 

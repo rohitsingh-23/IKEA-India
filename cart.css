@@ -11,14 +11,13 @@
 }
 
 .cart-main {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   width: 70%;
   margin: auto;
   margin-top: 50px;
   /* height: 710px; */
   display: flex;
   flex-direction: column;
-
   margin-bottom: 20px;
 }
 
@@ -37,6 +36,7 @@
   width: 85%;
   display: flex;
   justify-content: center;
+  margin-bottom: 15px;
   /* margin-top: 20px; */
 }
 
@@ -190,6 +190,7 @@
 
 .retun-cart {
   /* border: 1px solid red; */
+  margin-top: 10px;
   height: 40%;
   width: 85%;
   display: flex;
@@ -237,7 +238,7 @@
   /* border: 1px solid black; */
   height: 40%;
   width: 85%;
-  margin-top: -50px;
+  /* margin-top: -50px; */
 }
 
 .recieve p {
@@ -348,5 +349,11 @@
 
 #gocheck,
 #gocheck p {
+  cursor: pointer;
+}
+#dimage{
+  cursor: pointer;
+}
+#svalue{
   cursor: pointer;
 }

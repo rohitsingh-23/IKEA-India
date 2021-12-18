@@ -34,6 +34,7 @@
       src="https://kit.fontawesome.com/07381c3866.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="./components/side nav/homenav.css">
     <title>Table</title>
     <style></style>
   </head>
@@ -42,6 +43,9 @@
     <div class="left">
       <div><span class="material-icons-outlined line3">menu</span></div>
     </div>
+
+    <!-- left slide home basic -->
+    <div id="mainnav"></div>
 
     <div id="preview"></div>
     <div id="pmeasure"></div>
@@ -410,4 +414,25 @@
   // footer part
   import footer from "./components/footer/footer.js";
   document.getElementById("footer").innerHTML = footer();
+
+  // goto cart
+  document.getElementById("gocart").onclick = ()=>{
+    window.location.href = "cart.html"
+  }
+
+  // slide home setup
+  import left from "./components/side nav/homenav.js"
+  // console.log(left);
+  document.getElementById("mainnav").innerHTML = left();
+
+  document.querySelector(".line3").addEventListener("click", ()=>{
+    // document.querySelector(".main").style.display = "block";
+    // document.querySelector(".main").style.transform = "scaleX(1)";
+    document.querySelector(".main").style.transform = "translateX(0px)";
+  })
+  document.querySelector(".close").addEventListener("click", ()=>{
+    // document.querySelector(".main").style.display = "none";
+    // document.querySelector(".main").style.transform = "scaleX(0)";
+    document.querySelector(".main").style.transform = "translateX(-100%)";
+  })
 </script>

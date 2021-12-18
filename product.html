@@ -11,10 +11,17 @@
     <link rel="stylesheet" href="./components/footer/footer.css">
     <script src="https://kit.fontawesome.com/07381c3866.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./components/navbar/nav.css">
+    <link rel="stylesheet" href="./components/side nav/homenav.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="./components/navbar/nav.css" />
     <title>Furniture sets</title>
   </head>
   <body>
-    <div class="nav">
+
+    <div id="tnav"></div>
+
+    <!-- <div class="nav">
       <div class="navlogo">
         <img
           src="https://www.ikea.com/in/en/static/ikea-logo.f7d9229f806b59ec64cb.svg"
@@ -41,7 +48,13 @@
         <span class="material-icons-outlined"> person_outline </span>
         <span class="material-icons-outlined"> shopping_basket</span>
       </div>
-    </div>
+    </div> -->
+
+    <!-- left slide home basic -->
+    <div id="mainnav"></div>
+
+    <!-- left product slide -->
+    <div id="productNav"></div>
 
     <div class="left">
       <div><span class="material-icons-outlined line3">menu</span></div>
@@ -756,9 +769,7 @@
     }
   }
 
-  document.querySelector(".navlogo").addEventListener("click", ()=>{
-    window.location.href = "home.html"
-  })
+  
   
   document.getElementById("low").addEventListener("click", ()=>{
     // let data1 = [{...data}]
@@ -889,4 +900,32 @@
    // footer part
   import footer from "./components/footer/footer.js"
   document.getElementById("footer").innerHTML = footer();
+
+  
+
+    // login slide setup
+
+  import left from "./components/side nav/homenav.js"
+  // console.log(left);
+  document.getElementById("mainnav").innerHTML = left();
+  document.querySelector(".line3").addEventListener("click", ()=>{
+    document.querySelector(".main").style.transform = "translateX(0px)";
+  })
+  document.querySelector(".close").addEventListener("click", ()=>{
+    document.querySelector(".main").style.transform = "translateX(-100%)";
+  })
+
+  // nav bar setup
+  import nav from "./components/navbar/nav.js";
+  console.log(nav);
+  document.getElementById("tnav").innerHTML = nav();
+
+  document.querySelector(".navlogo").addEventListener("click", ()=>{
+    window.location.href = "home.html"
+  })
+
+  // goto cart
+  document.getElementById("gocart").onclick = ()=>{
+    window.location.href = "cart.html"
+  }
 </script>

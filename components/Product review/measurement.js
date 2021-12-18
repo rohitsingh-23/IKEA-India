@@ -1,6 +1,6 @@
 function measurement(){
     return `<div id="meas-nav">
-    <div class="mclose"><ion-icon name="close-outline"></ion-icon></div>
+    <div id="c"><div class="mclose"><ion-icon name="close-outline"></ion-icon></div></div>
     <div id="first">
         <h1>Measurements </h1>
       <div class="meas-p">
@@ -80,7 +80,7 @@ function measurement(){
 
 function product(){
     return `<div class="psidenav">
-    <div class="pclose"><ion-icon name="close-outline"></ion-icon></div>
+    <div id="pc"><div class="pclose"><ion-icon name="close-outline"></ion-icon></div></div>
     <div class="prod-head">
         <h2>Product details</h2>
 
