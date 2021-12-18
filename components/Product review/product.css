@@ -1,0 +1,120 @@
+.psidenav {
+    height: 100%;
+    width: 490px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: white;
+     overflow: scroll;
+    overflow-x: hidden;
+    padding-top: 40px;
+    /* border: 1px solid red; */
+    padding-left: 40px;
+    transform: translateX(100%);
+    transition: transform 400ms ease-in;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  /* Style the sidenav links and the dropdown button */
+ 
+  .pdropdown-btn {
+    padding: 10px 8px 6px 1px;
+    text-decoration: none;
+    font-size: 20px;
+  
+    display: block;
+    border: none;
+    background: none;
+    width: 400px;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    border-top: 1px solid grey;
+    /* border-bottom: 1px solid grey ; */
+    height: 100px;
+  }
+  .pdropdown-container {
+    display: none;
+    width: 400px;
+    padding-left: 8px;
+  }
+
+  /* Optional: Style the caret down icon */
+  .fa-caret-down {
+    float: right;
+    padding-right: 8px;
+  }
+  .meas-sec div, .prod-sec div{
+margin-top: -5px;
+border: 1px solid black;
+width: 100px;
+height: 20px;
+background-color: black;
+color: white;
+text-align: center;
+font-size: 14px;
+font-weight: 600;
+padding-top: 3px;
+}
+.meas-sec p{
+font-size: 13px;
+}
+.prod-head{
+/* border: 1px solid teal; */
+width: 400px;
+margin-bottom: 50px;
+/* color: #818181; */
+}
+.prod-head a{
+text-decoration: underline;
+color: #818181; 
+}
+.pdropdown-container p{
+line-height: 1;
+margin-top: -12px;
+}
+.prod-h4 h4{
+line-height: 0;
+}
+#prod-susta p {
+line-height: 1.8;
+}
+.prod-asse {
+display: flex;
+margin-top: 30px;
+width: 100%;
+border-top: 1px solid grey;
+padding-top: 40px;
+}
+
+.prod-icon{
+margin-left: 30%;
+/* border: 1px solid green; */
+}
+.prod-sec{
+width: 300px;
+height: 80%;
+/* border: 1px solid teal; */
+}
+.prod-sec p{
+font-size: 20px;
+}
+.pclose {
+/* border: 1px solid red; */
+width: 50px;
+height: 50px;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-left: 80%;
+}
+.pclose:hover{
+  background-color: #eee;
+}
+
+.pclose ion-icon {
+height: 25px;
+width: 25px;
+}

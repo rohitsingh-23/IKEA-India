@@ -1,0 +1,302 @@
+
+
+/* left start */
+.directory {
+  display: flex;
+  /* align-items: center; */
+}
+.container {
+  position: relative;
+  left: 7%;
+  width: 92%;
+}
+.directory > * {
+  font-size: 12px;
+  font-weight: 400;
+  color: #484848;
+}
+.arrow {
+  font-size: 12px;
+}
+.catname {
+  margin-top: 50px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #111111;
+}
+.sets {
+  display: flex;
+  justify-content: space-between;
+}
+.setsimg {
+  width: 300px;
+  cursor: pointer;
+}
+.setsname {
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.subtitle > p:first-child {
+  font-size: 24px;
+  font-weight: 700;
+}
+.subtitle > p:last-child {
+  font-size: 14px;
+  font-weight: 400;
+  color: #484848;
+  width: 650px;
+}
+.function {
+  display: flex;
+  justify-content: space-between;
+}
+.leftfunc {
+  display: flex;
+  position: relative;
+}
+.leftfunc > button {
+  border-radius: 18px;
+  border: none;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  height: 40px;
+  gap: 10px;
+  padding: 15px;
+  justify-content: space-around;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.rightfunc {
+  display: flex;
+  margin-top: -15px;
+  align-items: center;
+  margin-right: 10px;
+}
+.rightfunc > p {
+  margin-right: 10px;
+  font-size: 12px;
+  color: #929292;
+}
+.rightfunc  button {
+  height: 33px;
+  font-weight: 700;
+  font-size: 12px;
+  border: 1px solid rgb(201, 201, 201);
+  background: transparent;
+  cursor: pointer;
+  /* border-radius: 5px; */
+}
+
+/* Dropdown menu things */
+#sortdrop {
+  position: absolute;
+  top: 55px;
+  display: grid;
+  width: 300px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: white;
+  border-radius: 15px;
+  height: 500px;
+  overflow-y: scroll;
+  display: none;
+  z-index: 1;
+}
+#sortdrop > div {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  justify-content: space-around;
+  padding: 15px;
+}
+#sortdrop label {
+  font-size: 14px;
+  color: #484848;
+}
+/* Category dropDown */
+#catdrop {
+  position: absolute;
+  left: 95px;
+  top: 55px;
+  display: grid;
+  width: 300px;
+  height: 250px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: white;
+  border-radius: 15px;
+  overflow-y: scroll;
+  display: none;
+  z-index: 1;
+}
+#catdrop > div,
+#seatsdrop > div,
+#pricedrop > div,
+#matdrop > div {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  justify-content: space-around;
+  padding: 15px;
+}
+#catdrop label,
+#seatsdrop label,
+#pricedrop label,
+#matdrop label {
+  font-size: 14px;
+  color: #484848;
+}
+/*Number of Seats drop */
+#seatsdrop {
+  position: absolute;
+  left: 225px;
+  top: 55px;
+  display: grid;
+  width: 300px;
+  height: 150px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: white;
+  border-radius: 15px;
+  overflow-y: scroll;
+  display: none;
+  z-index: 1;
+}
+/* price drop */
+#pricedrop {
+  position: absolute;
+  left: 390px;
+  top: 55px;
+  display: grid;
+  width: 300px;
+  height: 200px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: white;
+  border-radius: 15px;
+  overflow-y: scroll;
+  display: none;
+  z-index: 1;
+}
+/* material drop */
+#matdrop {
+  position: absolute;
+  left: 495px;
+  top: 55px;
+  display: grid;
+  width: 300px;
+  height: 200px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: white;
+  border-radius: 15px;
+  overflow-y: scroll;
+  display: none;
+  z-index: 1;
+}
+/* Mapping products from data  */
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 22%);
+  gap: 2% 4%;
+  z-index: -1;
+}
+#box {
+  position: relative;
+  cursor: pointer;
+  /* border: 1px solid blue; */
+}
+#img1 {
+  /* position: absolute; */
+  top: 0;
+  width: 100%;
+  border: 1px solid transparent;
+
+}
+#img2 {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  border: 1px solid white;
+  /* z-index: -2; */
+}
+#img2:hover{
+   display: none;
+ }
+#title {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+#des {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: #484848;
+}
+#pdiv {
+  margin-top: 3px;
+  padding: 0;
+  display: flex;
+  align-items: baseline;
+}
+#rs {
+  margin: 0;
+  padding: 0;
+  font-size: 11px;
+  font-weight: 700;
+}
+#proprice {
+  margin: 0;
+  padding: 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+/* left nav bar */
+.left{
+  position: relative;
+  top: 0;
+  width: 6%;
+  height: 100%;
+  position: fixed;
+  /* border: 1px solid red; */
+}
+.line3{
+  margin: 30%;
+}
+#pr{
+  display: flex;
+  border-radius: 8px;
+  border: 1px solid #dddddd;
+}
+#pr>button{
+  /* border: none; */
+  
+
+}
+#product{
+  border: 1px solid black;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+#room{
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+#product:focus{
+  border: 1px solid black;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+
+}
+#room:focus{
+  border: 1px solid black;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+#footer{
+  padding: 0;
+  margin: 0;
+  width: 97%;
+  margin-left: -2px;
+  margin-top:350px;
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/07381c3866.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+    <style>
+      #sideBar {
+
+        width: 0;
+        position: absolute;
+        z-index: 1;
+        height: auto;
+        overflow-x: hidden;
+        overflow: hidden;
+        overflow-y: scroll;
+        top: 1;
+        transition: 0.5s;
+        padding-top: 20px;
+
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+      #sideBar div {
+        padding-left: 200px;
+      }
+      #head-text a,
+      .secHead a,
+      .list-side a {
+        font-size: 52px;
+        font-weight: 700;
+        text-decoration: none;
+        color: black;
+      }
+      .secHead a {
+        font-size: 23px;
+        font-weight: 600;
+        line-height: 2;
+      }
+      .list-side {
+        margin-top: 70px;
+      }
+      .list-side a {
+        font-size: 21px;
+        font-weight: 400;
+      }
+
+      .closebtn {
+        font-size: 50px;
+        text-decoration: none;
+        text-align: center;
+        color: black;
+        margin-left: -200px;
+      }
+      #closeDiv {
+        display: none;
+        position: fixed;
+        top: 0;
+        /* overflow: hidden; */
+        width: 30%;
+        height: 150px;
+        /* border: 1px solid yellow; */
+        margin-left: -100px;
+        background-color: white;
+      }
+      #spanImg img {
+          /* padding-top: 20px; */
+        width: 140px;
+        height: 70%;
+        /* border: 1px solid teal; */
+        margin-left: -260px;
+      }
+      #closeDiv div{
+          padding-top: 30px;
+      }
+    
+
+      #side-content {
+        margin-left: -170px;
+        margin-top: 180px;
+      }
+      #globe {
+        width: 60px;
+        height: 30px;
+        font-size: 20px;
+        border: 1px solid grey;
+        border-radius: 30px;
+        padding: 10px;
+        /* text-align: center; */
+        display: flex;
+        /* gap: -100px; */
+        /* justify-content: space-between; */
+        /* margin-left: 190px; */
+        /* margin-top: 100px; */
+      }
+      #iDiv {
+        margin-left: -350px;
+      }
+      #country {
+        margin-left: -200px;
+      }
+      #sideBar a:hover{
+        text-decoration: underline;
+        text-decoration-color: black;
+        
+      }
+      #globe:hover{
+        border: 2px solid black;
+        font-weight: 500;
+      }
+      .openBtn{
+          width: 100px;
+          height: 100px;
+          font-size: 50px;
+          
+      }
+      </style>
+  </head>
+  <body>
+    <div id="sideBar">
+      <div id="closeDiv">
+        <div id="delete">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            >×</a
+          >
+        </div>
+        <div id="spanImg">
+          <img
+            src="https://www.ikea.com/in/en/static/ikea-logo.f7d9229f806b59ec64cb.svg"
+            alt=""
+            srcset=""
+          />
+        </div>
+      </div>
+      <div id="side-content">
+        <div id="head-text">
+          <p><a href="#">Products</a></p>
+          <p><a href="#">Rooms</a></p>
+          <p><a href="#">New at IKEA</a></p>
+          <p><a href="#">All offers</a></p>
+          <p><a href="#">Rooms</a></p>
+        </div>
+        <div class="secHead">
+          <p><a href="#">Ideas</a></p>
+          <p><a href="#">Currently at IKEA</a></p>
+          <p><a href="#">Track Your Order</a></p>
+        </div>
+        <div class="list-side">
+          <p><a href="#">IKEA Family</a></p>
+          <p><a href="#">IKEA Business</a></p>
+          <p><a href="#">Store</a></p>
+          <p><a href="#">IKEA Restaurant</a></p>
+          <p><a href="#">Shop by Series</a></p>
+          <p><a href="#">Customer Service</a></p>
+          <p><a href="#">Design your room</a></p>
+          <p><a href="#">My Profile</a></p>
+        </div>
+
+        <div id="globe">
+          <div id="iDiv"><i class="fas fa-globe"></i></div>
+          <div id="country">Change Country</div>
+        </div>
+      </div>
+    </div>
+    <button class="openBtn" onclick="openSide()">☰</button>
+  </body>
+</html>
+
+<script>
+  function openSide() {
+    document.getElementById("sideBar").style.width = "700px";
+    document.getElementById("closeDiv").style.display = "flex";
+  }
+  function closeNav() {
+    document.getElementById("sideBar").style.width = "0px";
+    document.getElementById("closeDiv").style.display = "none";
+  }
+</script>

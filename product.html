@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link rel="icon" href="https://www.ikea.com/in/en/static/ikea-logo.f7d9229f806b59ec64cb.svg">
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="./components/footer/footer.css">
+    <script src="https://kit.fontawesome.com/07381c3866.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./components/navbar/nav.css">
+    <link rel="stylesheet" href="./components/side nav/homenav.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="./components/navbar/nav.css" />
+    <title>Furniture sets</title>
+  </head>
+  <body>
+
+    <div id="tnav"></div>
+
+    <!-- <div class="nav">
+      <div class="navlogo">
+        <img
+          src="https://www.ikea.com/in/en/static/ikea-logo.f7d9229f806b59ec64cb.svg"
+          alt=""
+        />
+      </div>
+      <div class="navpd">
+        <p>Products</p>
+        <p>Rooms</p>
+        <p>New at IKEA</p>
+        <p>All offers</p>
+      </div>
+      <div class="navs">
+        <span class="material-icons-outlined navsearch"> search </span>
+        <input
+          id="search"
+          type="search"
+          placeholder="What are you looking for?"
+        />
+        <span class="material-icons-outlined navcamera"> photo_camera </span>
+      </div>
+      <div class="navlogin">
+        <span class="material-icons-outlined"> local_shipping </span>
+        <span class="material-icons-outlined"> person_outline </span>
+        <span class="material-icons-outlined"> shopping_basket</span>
+      </div>
+    </div> -->
+
+    <!-- left slide home basic -->
+    <div id="mainnav"></div>
+
+    <!-- left product slide -->
+    <div id="productNav"></div>
+
+    <div class="left">
+      <div><span class="material-icons-outlined line3">menu</span></div>
+    </div>
+    <div class="sidenav">
+      
+    </div>
+
+    <div class="container">
+      <hr />
+      <div class="directory">
+        <p>
+          Products
+          <span class="material-icons-outlined arrow">chevron_right</span>
+          Furniture
+          <span class="material-icons-outlined arrow">chevron_right</span>
+          Furniture sets
+        </p>
+      </div>
+
+      <div class="title">
+        <p class="catname">Furniture sets</p>
+      </div>
+
+      <div class="sets">
+        <div>
+          <img
+            class="setsimg"
+            src="https://www.ikea.com/global/assets/navigation/images/outdoor-dining-sets-21967.jpeg?imwidth=400"
+            alt=""
+          />
+          <p class="setsname">Dining sets</p>
+        </div>
+        <div>
+          <img
+            class="setsimg"
+            src="https://www.ikea.com/in/en/navigation/images/dining-sets-19145.jpeg?imwidth=400"
+            alt=""
+          />
+          <p class="setsname">Dining sets</p>
+        </div>
+        <div>
+          <img
+            class="setsimg"
+            src="https://www.ikea.com/global/assets/navigation/images/desk-chair-sets-53249.jpeg?imwidth=400"
+            alt=""
+          />
+          <p class="setsname">Desk & chair sets</p>
+        </div>
+        <div>
+          <img
+            class="setsimg"
+            src="https://www.ikea.com/global/assets/navigation/images/bathroom-furniture-sets-46079.jpeg?imwidth=400"
+            alt=""
+          />
+          <p class="setsname">Bathroom furniture sets</p>
+        </div>
+      </div>
+
+      <div class="subtitle">
+        <p>Everything you need to put your room together</p>
+        <p>
+          A room looks best when furnished with matched and coordinated
+          furniture. Our furniture sets have the essential pieces of furniture
+          for your room perfectly matched in size, style and proportion.
+          Furnishing your space is as easy as selecting the colour and style
+          that suits your room best.
+        </p>
+      </div>
+
+      <div class="function">
+        <div class="leftfunc">
+          <button id="sort">
+            Sort <span id="rsort" class="material-icons-outlined">expand_more </span>
+          </button>
+          <!-- Drop down options -->
+          <div id="sortdrop">
+            <div>
+              <label for="mattch">Best match</label>
+              <input id="matchCall" type="radio" name="match" checked />
+            </div>
+            <div>
+              <label for="mattch">Price: low to high</label>
+              <input id="low" type="radio" name="match" />
+            </div>
+            <div>
+              <label for="mattch">Price: high to low</label>
+              <input id="high" type="radio" name="match" />
+            </div>
+            <div>
+              <label for="mattch">Newest</label>
+              <input type="radio" name="match" />
+            </div>
+            <div>
+              <label for="mattch">Customer rating</label>
+              <input type="radio" name="match"/>
+            </div>
+            <div>
+              <label for="mattch">Name</label>
+              <input type="radio" name="match" />
+            </div>
+            <div>
+              <label for="mattch">Most Popular</label>
+              <input type="radio" name="match" />
+            </div>
+            <div>
+              <label for="mattch">Width</label>
+              <input type="radio" name="match" />
+            </div>
+            <div>
+              <label for="mattch">Height</label>
+              <input type="radio" name="match" />
+            </div>
+            <div>
+              <label for="mattch">Depth</label>
+              <input type="radio" name="match" />
+            </div>
+            <div>
+              <label for="mattch">Length</label>
+              <input type="radio" name="match"  />
+            </div>
+          </div>
+
+          <button id="cat">
+            Category <span id="rcat" class="material-icons-outlined">expand_more </span>
+          </button>
+          <!-- Category drop down -->
+          <div id="catdrop">
+            <div>
+              <label for="dining">Dining sets</label>
+              <input type="checkbox" name="dining" />
+            </div>
+            <div>
+              <label for="dining">Bathroom furniture sets</label>
+              <input type="checkbox" name="dining" />
+            </div>
+            <div>
+              <label for="dining">Desk & chair sets</label>
+              <input type="checkbox" name="dining" />
+            </div>
+            <div>
+              <label for="dining">Dining sets</label>
+              <input type="checkbox" name="dining" />
+            </div>
+            <div>
+              <label for="bed">Bedroom furniture sets</label>
+              <input type="checkbox" name="bed" disabled />
+            </div>
+            <div>
+              <label for="sofa">Outdoor sofa combinations</label>
+              <input type="checkbox" name="sofa" disabled />
+            </div>
+          </div>
+
+          <button id="seats">
+            Number of seats
+            <span id="rseat" class="material-icons-outlined">expand_more </span>
+          </button>
+          <!-- Number of seats drop -->
+          <div id="seatsdrop">
+            <div>
+              <label for="s2">Up to 2 seats</label>
+              <input type="checkbox" name="s2" />
+            </div>
+            <div>
+              <label for="s4">Up to 4 seats</label>
+              <input type="checkbox" name="s4" />
+            </div>
+            <div>
+              <label for="s6">Up to 6 seats</label>
+              <input type="checkbox" name="s6" />
+            </div>
+            <div>
+              <label for="s8">Up to 8 seats</label>
+              <input type="checkbox" name="s8" />
+            </div>
+          </div>
+
+          <button id="price">
+            Price <span id="rprice" class="material-icons-outlined">expand_more </span>
+          </button>
+          <!-- price drop -->
+          <div id="pricedrop">
+            <div>
+              <label for="9999">₹0 - 9,999</label>
+              <input name="p0" type="checkbox" />
+            </div>
+            <div>
+              <label for="9999">₹10,000 - 19,999</label>
+              <input name="p10000" type="checkbox"/>
+            </div>
+            <div>
+              <label for="9999">₹20,000 - 29,999</label>
+              <input name="p20000" type="checkbox" />
+            </div>
+            <div>
+              <label for="9999">₹30,000 - 39,999</label>
+              <input name="p30000" type="checkbox"  />
+            </div>
+            <div>
+              <label for="9999">₹40,000+</label>
+              <input name="p40000" type="checkbox"  />
+            </div>
+          </div>
+
+          <button id="mat">
+            Material <span id="rmat" class="material-icons-outlined">expand_more </span>
+          </button>
+          <!-- material drop -->
+          <div id="matdrop">
+            <div>
+              <label for="1">Wood (including board)</label>
+              <input type="checkbox" name="1" />
+            </div>
+            <div>
+              <label for="1">Metal</label>
+              <input type="checkbox" name="1" />
+            </div>
+            <div>
+              <label for="1">Solid wood</label>
+              <input type="checkbox" name="1" />
+            </div>
+            <div>
+              <label for="1">Wood veneer</label>
+              <input type="checkbox" name="1" />
+            </div>
+            <div>
+              <label for="1">Glass</label>
+              <input type="checkbox" name="1" />
+            </div>
+            <div>
+              <label for="1">Wood (including board)</label>
+              <input type="checkbox" name="1" />
+            </div>
+            <div>
+              <label for="1">Wood (including board)</label>
+              <input type="checkbox" name="1" />
+            </div>
+          </div>
+
+          <button>
+            All filters<span class="material-icons-outlined"> tune </span>
+            <span class="material-icons-outlined">expand_more </span>
+          </button>
+        </div>
+        <div class="rightfunc">
+          <p>117 items</p>
+          <div id="pr">
+            <button id="product">Product</button>
+            <button id="room">Room</button>
+          </div>
+          
+        </div>
+      </div>
+      <hr />
+      <div class="products"></div>
+    </div>
+    <div id="footer"></div>
+    
+  </body>
+</html>
+
+<script type="module">
+  let sortvalue = false;
+  let sort = document.getElementById("sort").addEventListener("click", () => {
+    if (sortvalue) {
+      sortvalue = false;
+    } else {
+      sortvalue = true;
+    }
+    if (sortvalue) {
+      document.getElementById("sortdrop").style.display = "block";
+      document.getElementById("sort").style.backgroundColor = "black";
+      document.getElementById("sort").style.color = "white";
+      document.getElementById("rsort").style.transform = "rotate(180deg)"
+    } else {
+      document.getElementById("sortdrop").style.display = "none";
+      document.getElementById("sort").style.backgroundColor = "#efefef";
+      document.getElementById("sort").style.color = "black";
+      document.getElementById("rsort").style.transform = "rotate(0deg)"
+    }
+  });
+
+  let catvalue = false;
+  let cat = document.getElementById("cat").addEventListener("click", () => {
+    if (catvalue) {
+      catvalue = false;
+    } else {
+      catvalue = true;
+    }
+    if (catvalue) {
+      document.getElementById("catdrop").style.display = "block";
+      document.getElementById("cat").style.backgroundColor = "black";
+      document.getElementById("cat").style.color = "white";
+      document.getElementById("rcat").style.transform = "rotate(180deg)"
+    } else {
+      document.getElementById("catdrop").style.display = "none";
+      document.getElementById("cat").style.backgroundColor = "#efefef";
+      document.getElementById("cat").style.color = "black";
+      document.getElementById("rcat").style.transform = "rotate(0deg)"
+    }
+  });
+
+  let seatvalue = false;
+  let seats = document.getElementById("seats").addEventListener("click", () => {
+    if (seatvalue) {
+      seatvalue = false;
+    } else {
+      seatvalue = true;
+    }
+    if (seatvalue) {
+      document.getElementById("seatsdrop").style.display = "block";
+      document.getElementById("seats").style.backgroundColor = "black";
+      document.getElementById("seats").style.color = "white";
+      document.getElementById("rseat").style.transform = "rotate(180deg)"
+    } else {
+      document.getElementById("seatsdrop").style.display = "none";
+      document.getElementById("seats").style.backgroundColor = "#efefef";
+      document.getElementById("seats").style.color = "black";
+      document.getElementById("rseat").style.transform = "rotate(0deg)"
+    }
+  });
+
+  let pricevalue = false;
+  let price = document.getElementById("price").addEventListener("click", () => {
+    if (pricevalue) {
+      pricevalue = false;
+    } else {
+      pricevalue = true;
+    }
+    if (pricevalue) {
+      document.getElementById("pricedrop").style.display = "block";
+      document.getElementById("price").style.backgroundColor = "black";
+      document.getElementById("price").style.color = "white";
+      document.getElementById("rprice").style.transform = "rotate(180deg)"
+    } else {
+      document.getElementById("pricedrop").style.display = "none";
+      document.getElementById("price").style.backgroundColor = "#efefef";
+      document.getElementById("price").style.color = "black";
+      document.getElementById("rprice").style.transform = "rotate(0deg)"
+    }
+  });
+
+  let matvalue = false;
+  let mat = document.getElementById("mat").addEventListener("click", () => {
+    if (matvalue) {
+      matvalue = false;
+    } else {
+      matvalue = true;
+    }
+    if (matvalue) {
+      document.getElementById("matdrop").style.display = "block";
+      document.getElementById("mat").style.backgroundColor = "black";
+      document.getElementById("mat").style.color = "white";
+      document.getElementById("rmat").style.transform = "rotate(180deg)"
+    } else {
+      document.getElementById("matdrop").style.display = "none";
+      document.getElementById("mat").style.backgroundColor = "#efefef";
+      document.getElementById("mat").style.color = "black";
+      document.getElementById("rmat").style.transform = "rotate(0deg)"
+    }
+  });
+
+  // dummy data
+  let data = [
+    {
+      img1: "https://www.ikea.com/in/en/images/products/taernoe-table-2-chairs-outdoor-red-light-brown-stained__0776099_pe757709_s5.jpg?f=xxs",
+      img2: "https://www.ikea.com/in/en/images/products/taernoe-table-2-chairs-outdoor-red-light-brown-stained__0917464_ph168428_s5.jpg?f=xxs",
+      title: "TÄRNÖ",
+      des: "Table+2 chairs, outdoor",
+      price: 4290,
+      varient: true,
+      vimg1:
+        "https://www.ikea.com/in/en/images/products/taernoe-table-2-chairs-outdoor-red-light-brown-stained__0776099_pe757709_s5.jpg?f=xu",
+      vimg2:
+        "https://www.ikea.com/in/en/images/products/taernoe-table-2-chairs-outdoor-red-light-brown-stained-kuddarna-beige__0776097_pe757707_s5.jpg?f=xu",
+      vimg3:
+        "https://www.ikea.com/in/en/images/products/taernoe-table-2-chairs-outdoor-red-light-brown-stained-kuddarna-grey__0776098_pe757713_s5.jpg?f=xu",
+    },
+    {
+      img1: "https://www.ikea.com/in/en/images/products/pax-wardrobe-black-brown-mehamn-black-brown-stained-ash-effect__0716359_pe730830_s5.jpg?f=xxs",
+      img2: "https://www.ikea.com/in/en/images/products/pax-wardrobe-black-brown-mehamn-black-brown-stained-ash-effect__0716358_pe730831_s5.jpg?f=xxs",
+      title: "PAX",
+      des: "Wardrobe 150x66x236 cm (59x26x93 1/8)",
+      price: 42250,
+      varient: false,
+    },
+    {
+      img1: "https://www.ikea.com/in/en/images/products/melltorp-adde-table-and-4-chairs-white-black__0445221_pe595674_s5.jpg?f=xxs",
+      img2: "https://www.ikea.com/in/en/images/products/melltorp-adde-table-and-4-chairs-white-black__0872134_pe716740_s5.jpg?f=xxs",
+      title: "MELLTORP / JANINGE",
+      des: "Table and 4 chairs, 125x75 cm (49 1/4x29 1/2)",
+      price: 19790,
+      varient: true,
+      vimg1:
+        "https://www.ikea.com/in/en/images/products/melltorp-adde-table-and-4-chairs-white-black__0445221_pe595674_s5.jpg?f=xu",
+      vimg2:
+        "https://www.ikea.com/in/en/images/products/melltorp-kaettil-table-and-4-chairs-white-knisa-light-grey__1016371_pe830349_s5.jpg?f=xu",
+      vimg3:
+        "https://www.ikea.com/in/en/images/products/melltorp-janinge-table-and-4-chairs-white-white__0737988_pe741289_s5.jpg?f=xu",
+    },
+    {
+      img1: "https://www.ikea.com/in/en/images/products/lisabo-janinge-table-and-4-chairs-ash-veneer-white__0737947_pe741267_s5.jpg?f=xxs",
+      img2: "https://www.ikea.com/in/en/images/products/lisabo-janinge-table-and-4-chairs-ash-veneer-white__0369188_ph124299_s5.jpg?f=xxs",
+      title: "LISABO / JANINGE",
+      des: "Table and 4 chairs,125x75 cm (49 1/4x29 1/2)",
+      price: 28790,
+      varient: true,
+      vimg1:
+        "https://www.ikea.com/in/en/images/products/lisabo-janinge-table-and-4-chairs-ash-veneer-white__0737947_pe741267_s5.jpg?f=xu",
+      vimg2:
+        "https://www.ikea.com/in/en/images/products/lisabo-odger-table-and-4-chairs-ash-veneer-anthracite__0747396_pe744531_s5.jpg?f=xu",
+      vimg3:
+        "https://www.ikea.com/in/en/images/products/lisabo-idolf-table-and-4-chairs-ash-veneer-black__0737944_pe741270_s5.jpg?f=xu",
+      vimg4:
+        "https://www.ikea.com/in/en/images/products/lisabo-roenninge-table-and-4-chairs-ash-veneer-green__0701525_pe724138_s5.jpg?f=xu",
+    },
+    {
+      img1: "https://www.ikea.com/in/en/images/products/sandsberg-adde-table-and-2-chairs-black-black__1016430_pe830391_s5.jpg?f=xxs",
+      img2: "https://www.ikea.com/in/en/images/products/sandsberg-adde-table-and-2-chairs-black-black__1027679_pe834976_s5.jpg?f=xxs",
+      title: "SANDSBERG / ADDE",
+      des: "Table and 2 chairs, 67x67 cm (26 3/8x26 3/8)",
+      price: 3690,
+      varient: false,
+    },
+    {
+      img1: "https://www.ikea.com/in/en/images/products/melltorp-nisse-table-and-2-folding-chairs-white-dark-blue-lilac__0737993_pe741294_s5.jpg?f=xxs",
+      img2: "https://www.ikea.com/in/en/images/products/melltorp-nisse-table-and-2-folding-chairs-white-dark-blue-lilac__0870501_pe695865_s5.jpg?f=xxs",
+      title: "MELLTORP / NISSE",
+      des: "Table and 2 folding chairs, 75 cm (29 1/2 )",
+      price: 4788,
+      varient: false,
+    },
+    {
+      img1: "https://www.ikea.com/in/en/images/products/melltorp-janinge-table-and-2-chairs-white-white__0547981_pe656963_s5.jpg?f=xxs",
+      img2: "https://www.ikea.com/in/en/images/products/melltorp-janinge-table-and-2-chairs-white-white__0872206_pe656964_s5.jpg?f=xxs",
+      title: "MELLTORP / JANINGE",
+      des: "Table and 2 chairs, 75x75 cm (29 1/2x29 1/2)",
+      price: 10890,
+      varient: true,
+      vimg1:
+        "https://www.ikea.com/in/en/images/products/melltorp-janinge-table-and-2-chairs-white-white__0547981_pe656963_s5.jpg?f=xu",
+      vimg2:
+        "https://www.ikea.com/in/en/images/products/melltorp-kaettil-table-and-2-chairs-white-knisa-light-grey__1016370_pe830348_s5.jpg?f=xu",
+      vimg3:
+        "https://www.ikea.com/in/en/images/products/melltorp-leifarne-table-and-2-chairs-mosaic-patterned-white-broringe-white__0943541_pe796968_s5.jpg?f=xu",
+      vimg4:
+        "https://www.ikea.com/in/en/images/products/melltorp-adde-table-and-2-chairs-white-white__0737985_pe741286_s5.jpg?f=xu",
+      vimg5:
+        "https://www.ikea.com/in/en/images/products/melltorp-adde-table-and-2-chairs-mosaic-patterned-white-white__0926676_pe789459_s5.jpg?f=xu",
+    },
+    {
+      img1: "https://www.ikea.com/in/en/images/products/ekedalen-table-and-4-chairs-white-orrsta-light-grey__0737693_pe741213_s5.jpg?f=xxs",
+      img2: "https://www.ikea.com/in/en/images/products/ekedalen-table-and-4-chairs-white-orrsta-light-grey__0872377_pe640528_s5.jpg?f=xxs",
+      title: "EKEDALEN / EKEDALEN",
+      des: "Table and 4 chairs, 120/180 cm (47 1/4/70 7/8)",
+      price: 35990,
+      varient: true,
+      vimg1:
+        "https://www.ikea.com/in/en/images/products/ekedalen-table-and-4-chairs-white-orrsta-light-grey__0737693_pe741213_s5.jpg?f=xu",
+      vimg2:
+        "https://www.ikea.com/in/en/images/products/ekedalen-odger-table-and-4-chairs-oak-blue__0737724_pe741237_s5.jpg?f=xu",
+      vimg3:
+        "https://www.ikea.com/in/en/images/products/ekedalen-svenbertil-table-and-4-chairs-oak-black__0737727_pe741239_s5.jpg?f=xu",
+      vimg4:
+        "https://www.ikea.com/in/en/images/products/ekedalen-odger-table-and-4-chairs-dark-brown-blue__0737723_pe741236_s5.jpg?f=xu",
+      vimg5:
+        "https://www.ikea.com/in/en/images/products/ekedalen-odger-table-and-4-chairs-white-blue__0737725_pe741232_s5.jpg?f=xu",
+    },
+    {
+      img1: "https://www.ikea.com/in/en/images/products/lerhamn-table-and-2-chairs-black-brown-vittaryd-beige__0248162_pe386652_s5.jpg?f=xxs",
+      img2: "https://www.ikea.com/in/en/images/products/lerhamn-table-and-2-chairs-black-brown-vittaryd-beige__0744760_pe743387_s5.jpg?f=xxs",
+      title: "LERHAMN",
+      des: "Table and 2 chairs, 74x74 cm (29 1/8x29 1/8)",
+      price: 10890,
+      varient: true,
+      vimg1:
+        "https://www.ikea.com/in/en/images/products/lerhamn-table-and-2-chairs-black-brown-vittaryd-beige__0248162_pe386652_s5.jpg?f=xu",
+      vimg2:
+        "https://www.ikea.com/in/en/images/products/lerhamn-table-and-2-chairs-light-antique-stain-white-stain-vittaryd-beige__0247204_pe386034_s5.jpg?f=xu",
+    },
+    {
+      img1: "https://www.ikea.com/in/en/images/products/nordviken-table-and-4-chairs-black-black__0747569_pe744589_s5.jpg?f=xxs",
+      img2: "https://www.ikea.com/in/en/images/products/nordviken-table-and-4-chairs-black-black__0744797_pe743408_s5.jpg?f=xxs",
+      title: "NORDVIKEN / NORDVIKEN",
+      des: "Table and 4 chairs, 152/223x95 cm (59 7/8/87 3/4x37 3/8)",
+      price: 44790,
+      varient: true,
+      vimg1:
+        "https://www.ikea.com/in/en/images/products/nordviken-table-and-4-chairs-black-black__0747569_pe744589_s5.jpg?f=xu",
+      vimg2:
+        "https://www.ikea.com/in/en/images/products/nordviken-roenninge-table-and-4-chairs-black-green__0747572_pe744592_s5.jpg?f=xu",
+      vimg3:
+        "https://www.ikea.com/in/en/images/products/nordviken-leifarne-table-and-4-chairs-black-broringe-black__0747554_pe744579_s5.jpg?f=xu",
+    },
+    {
+      img1: "https://www.ikea.com/in/en/images/products/lerhamn-table-and-4-chairs-black-brown-vittaryd-beige__0247203_pe386035_s5.jpg?f=xxs",
+      img2: "https://www.ikea.com/in/en/images/products/lerhamn-table-and-4-chairs-black-brown-vittaryd-beige__0761150_pe751122_s5.jpg?f=xxs",
+      title: "LERHAMN",
+      des: "Table and 4 chairs, 118x74 cm (46 1/2x29 1/8)",
+      price: 18790,
+      varient: false,
+    },
+    {
+      img1: "https://www.ikea.com/in/en/images/products/haverud-raskog-table-and-2-stools-black-black__1028676_pe835482_s5.jpg?f=xxs",
+      img2: "https://www.ikea.com/in/en/images/products/haverud-raskog-table-and-2-stools-black-black__1043569_pe841788_s5.jpg?f=xxs",
+      title: "HÅVERUD / RÅSKOG",
+      des: "Table and 2 stools, 105 cm (41 3/8 )",
+      price: 14970,
+      varient: false,
+    },
+    {
+      img1: "https://www.ikea.com/in/en/images/products/lagkapten-eldberget-vittsjoe-desk-and-storage-combination-and-swivel-chair-black-brown-dark-grey__1030728_pe836331_s5.jpg?f=xxs",
+      img2: "https://www.ikea.com/in/en/images/products/ekedalen-bar-table-and-4-bar-stools-dark-brown-orrsta-light-grey__0747808_pe744732_s5.jpg?f=xxs",
+      title: "HÅVERUD / RÅSKOG",
+      des: "Desk and storage combination",
+      price: 9770,
+      varient: false,
+    },
+    {
+      img1: "https://www.ikea.com/in/en/images/products/ekedalen-bar-table-and-4-bar-stools-dark-brown-orrsta-light-grey__0747808_pe744732_s5.jpg?f=xxs",
+      img2: "https://www.ikea.com/in/en/images/products/ekedalen-bar-table-and-4-bar-stools-dark-brown-orrsta-light-grey__0872149_pe720430_s5.jpg?f=xxs",
+      title: "EKEDALEN / EKEDALEN",
+      des: "Bar table and 4 bar stools,",
+      price: 40950,
+      varient: false,
+    },
+    {
+      img1: "https://www.ikea.com/in/en/images/products/laneberg-svenbertil-table-and-4-chairs-brown-black-black__0743579_pe743093_s5.jpg?f=xxs",
+      img2: "https://www.ikea.com/in/en/images/products/laneberg-svenbertil-table-and-4-chairs-brown-black-black__0743580_pe743094_s5.jpg?f=xxs",
+      title: "LANEBERG / SVENBERTIL",
+      des: "Table and 4 chairs",
+      price: 24790,
+      varient: false,
+    },
+    {
+      img1: "https://www.ikea.com/in/en/images/products/nordviken-table-and-2-chairs-white-white__0747560_pe744584_s5.jpg?f=xxs",
+      img2: "https://www.ikea.com/in/en/images/products/nordviken-table-and-2-chairs-white-white__0797709_pe766998_s5.jpg?f=xxs",
+      title: "NORDVIKEN / NORDVIKEN",
+      des: "Table and 2 chairs, 74/104x74 cm (29 1/8/41x29 1/8)",
+      price: 18790,
+      varient: true,
+      vimg1:
+        "https://www.ikea.com/in/en/images/products/nordviken-table-and-2-chairs-white-white__0747560_pe744584_s5.jpg?f=xu",
+      vimg2:
+        "https://www.ikea.com/in/en/images/products/nordviken-leifarne-table-and-2-chairs-white-broringe-dark-yellow__0747490_pe744560_s5.jpg?f=xu",
+    },
+    {
+      img1: "https://www.ikea.com/in/en/images/products/melltorp-janinge-table-and-2-chairs-white-white__0547981_pe656963_s5.jpg?f=xxs",
+      img2: "https://www.ikea.com/in/en/images/products/enhet-tvaellen-bathroom-furniture-set-of-10-concrete-effect-white-pilkan-tap__0914621_pe784169_s5.jpg?f=xxs",
+      title: "ENHET / TVÄLLEN",
+      des: "Bathroom furniture, set of 10, tap44x43x87 cm (17 3/8x16 7/8x34 1/4)",
+      price: 18038,
+      varient: true,
+      vimg1:
+        "https://www.ikea.com/in/en/images/products/enhet-tvaellen-bathroom-furniture-set-of-10-concrete-effect-white-pilkan-tap__0831859_pe777436_s5.jpg?f=xu",
+      vimg2:
+        "https://www.ikea.com/in/en/images/products/enhet-tvaellen-bathroom-furniture-set-of-10-oak-effect-white-pilkan-tap__0831862_pe777435_s5.jpg?f=xu",
+      vimg3:
+        "https://www.ikea.com/in/en/images/products/enhet-tvaellen-bathroom-furniture-set-of-10-grey-frame-anthracite-pilkan-tap__1018851_pe831202_s5.jpg?f=xu",
+      vimg4:
+        "https://www.ikea.com/in/en/images/products/enhet-tvaellen-bathroom-furniture-set-of-10-white-anthracite-pilkan-tap__0831863_pe777455_s5.jpg?f=xu",
+      vimg5:
+        "https://www.ikea.com/in/en/images/products/enhet-tvaellen-bathroom-furniture-set-of-10-high-gloss-white-white-glypen-tap__0951543_pe777440_s5.jpg?f=xu",
+      vimg6:
+        "https://www.ikea.com/in/en/images/products/enhet-tvaellen-bathroom-furniture-set-of-10-white-pilkan-tap__0831864_pe777442_s5.jpg?f=xu",
+    },
+    {
+      img1: "https://www.ikea.com/in/en/images/products/enhet-tvaellen-bathroom-furniture-set-of-15-white-anthracite-pilkan-tap__0831908_pe777480_s5.jpg?f=xxs",
+      img2: "https://www.ikea.com/in/en/images/products/enhet-tvaellen-bathroom-furniture-set-of-15-white-anthracite-pilkan-tap__0914671_pe784217_s5.jpg?f=xxs",
+      title: "ENHET / TVÄLLEN",
+      des: "Bathroom furniture, set of 15, 122x43x87 cm (17 3/8x16 7/8x34 1/4)",
+      price: 34399,
+      varient: true,
+      vimg1:
+        "https://www.ikea.com/in/en/images/products/enhet-tvaellen-bathroom-furniture-set-of-15-white-anthracite-pilkan-tap__0831908_pe777480_s5.jpg?f=xu",
+      vimg2:
+        "https://www.ikea.com/in/en/images/products/enhet-tvaellen-bathroom-furniture-set-of-15-oak-effect-white-pilkan-tap__0958413_pe777511_s5.jpg?f=xu",
+      vimg3:
+        "https://www.ikea.com/in/en/images/products/enhet-tvaellen-bathroom-furniture-set-of-15-oak-effect-white-pilkan-tap__0958414_pe777518_s5.jpg?f=xu",
+      vimg4:
+        "https://www.ikea.com/in/en/images/products/enhet-tvaellen-bathroom-furniture-set-of-15-white-anthracite-pilkan-tap__0831915_pe777468_s5.jpg?f=xu",
+      vimg5:
+        "https://www.ikea.com/in/en/images/products/enhet-tvaellen-bathroom-furniture-set-of-15-grey-frame-anthracite-pilkan-tap__1018096_pe831063_s5.jpg?f=xu",
+    },
+    {
+      img1: "https://www.ikea.com/in/en/images/products/enhet-tvaellen-bathroom-furniture-set-of-14-grey-frame-anthracite-pilkan-tap__1018055_pe831048_s5.jpg?f=xxs",
+      img2: "https://www.ikea.com/in/en/images/products/enhet-tvaellen-bathroom-furniture-set-of-14-grey-frame-anthracite-pilkan-tap__1018056_pe831049_s5.jpg?f=xxs",
+      title: "ENHET / TVÄLLEN",
+      des: "Bathroom furniture, set of 14, grey frame/anthracite Pilkån tap122x43x87 cm (48x16 7/8x34 1/4)",
+      price: 31999,
+      varient: true,
+      vimg1:
+        "https://www.ikea.com/in/en/images/products/enhet-tvaellen-bathroom-furniture-set-of-14-grey-frame-anthracite-pilkan-tap__1018055_pe831048_s5.jpg?f=xu",
+      vimg2:
+        "https://www.ikea.com/in/en/images/products/enhet-tvaellen-bathroom-furniture-set-of-14-oak-effect-white-pilkan-tap__0958416_pe777465_s5.jpg?f=xu",
+      vimg3:
+        "https://www.ikea.com/in/en/images/products/enhet-tvaellen-bathroom-furniture-set-of-14-oak-effect-white-pilkan-tap__0831937_pe777486_s5.jpg?f=xu",
+      vimg4:
+        "https://www.ikea.com/in/en/images/products/enhet-tvaellen-bathroom-furniture-set-of-14-white-anthracite-pilkan-tap__0831938_pe777503_s5.jpg?f=xu",
+      vimg5:
+        "https://www.ikea.com/in/en/images/products/enhet-tvaellen-bathroom-furniture-set-of-14-concrete-effect-white-pilkan-tap__0831927_pe777464_s5.jpg?f=xu",
+    },
+    {
+      img1: "https://www.ikea.com/in/en/images/products/enhet-tvaellen-bathroom-furniture-set-of-11-high-gloss-white-white-glypen-tap__0831875_pe777450_s5.jpg?f=xxs",
+      img2: "https://www.ikea.com/in/en/images/products/enhet-tvaellen-bathroom-furniture-set-of-11-high-gloss-white-white-glypen-tap__0914772_pe784290_s5.jpg?f=xxs",
+      title: "ENHET / TVÄLLEN",
+      des: "Bathroom furniture, set of 11, 122x43x87 cm (48x16 7/8x34 1/4)",
+      price: 23629,
+      varient: true,
+      vimg1:
+        "https://www.ikea.com/in/en/images/products/enhet-tvaellen-bathroom-furniture-set-of-11-high-gloss-white-white-glypen-tap__0831875_pe777450_s5.jpg?f=xu",
+      vimg2:
+        "https://www.ikea.com/in/en/images/products/enhet-tvaellen-bathroom-furniture-set-of-11-oak-effect-white-pilkan-tap__0831876_pe777451_s5.jpg?f=xu",
+      vimg3:
+        "https://www.ikea.com/in/en/images/products/enhet-tvaellen-bathroom-furniture-set-of-11-grey-frame-anthracite-pilkan-tap__1018207_pe831095_s5.jpg?f=xu",
+      vimg4:
+        "https://www.ikea.com/in/en/images/products/enhet-tvaellen-bathroom-furniture-set-of-11-concrete-effect-white-pilkan-tap__0831873_pe777454_s5.jpg?f=xu",
+      vimg5:
+        "https://www.ikea.com/in/en/images/products/enhet-tvaellen-bathroom-furniture-set-of-11-white-anthracite-pilkan-tap__0831877_pe777441_s5.jpg?f=xu",
+      vimg6:
+        "https://www.ikea.com/in/en/images/products/enhet-tvaellen-bathroom-furniture-set-of-11-white-pilkan-tap__0831878_pe777453_s5.jpg?f=xu",
+    },
+    {
+      img1: "https://www.ikea.com/in/en/images/products/lagkapten-millberget-billy-oxberg-desk-and-storage-combination-and-swivel-chair-black-brown-black__1026951_pe834639_s5.jpg?f=xxs",
+      img2: "https://www.ikea.com/in/en/images/products/haverud-raskog-table-and-4-stools-black-black__1028677_pe835480_s5.jpg?f=xxs",
+      title: "LAGKAPTEN/MILLBERGET / BILLY/OXBERG",
+      des: "Desk and storage combination",
+      price: 30970,
+      varient: false,
+    },
+    {
+      img1: "https://www.ikea.com/in/en/images/products/haverud-raskog-table-and-4-stools-black-black__1028677_pe835480_s5.jpg?f=xxs",
+      img2: "https://www.ikea.com/in/en/images/products/haverud-raskog-table-and-4-stools-black-black__1043569_pe841788_s5.jpg?f=xxs",
+      title: "HÅVERUD / RÅSKOG",
+      des: "Table and 4 stools,170x78 cm (66 7/8x30 3/4)",
+      price: 19950,
+      varient: false,
+    },
+    {
+      img1: "https://www.ikea.com/in/en/images/products/vaestanby-vaestana-leifarne-table-and-4-chairs-dark-brown-white__0738123_pe741391_s5.jpg?f=xxs",
+      img2: "https://www.ikea.com/in/en/images/products/vaestanby-vaestana-leifarne-table-and-4-chairs-dark-brown-white__0872231_pe595179_s5.jpg?f=xxs",
+      title: "VÄSTANBY/VÄSTANÅ / LEIFARNE",
+      des: "Table and 4 chairs,170x78 cm (66 7/8x30 3/4)",
+      price: 36790,
+      varient: false,
+    },
+    {
+      img1: "https://www.ikea.com/in/en/images/products/moerbylanga-volfgang-table-and-4-chairs-brown-bomstad-black__0738085_pe741362_s5.jpg?f=xxs",
+      img2: "https://www.ikea.com/in/en/images/products/moerbylanga-volfgang-table-and-4-chairs-brown-bomstad-black__0872240_pe674355_s5.jpg?f=xxs",
+      title: "MÖRBYLÅNGA / VOLFGANG",
+      des: "Table and 4 chairs, 140x85 cm (55 1/8x33 1/2)",
+      price: 63790,
+      varient: true,
+      vimg1:
+        "https://www.ikea.com/in/en/images/products/moerbylanga-volfgang-table-and-4-chairs-brown-bomstad-black__0738085_pe741362_s5.jpg?f=xu",
+      vimg2:
+        "https://www.ikea.com/in/en/images/products/moerbylanga-odger-table-and-4-chairs-brown-white-beige__0738080_pe741357_s5.jpg?f=xu",
+      vimg3:
+        "https://www.ikea.com/in/en/images/products/moerbylanga-volfgang-table-and-4-chairs-brown-gunnared-medium-grey__0738084_pe741361_s5.jpg?f=xu",
+      vimg4:
+        "https://www.ikea.com/in/en/images/products/moerbylanga-odger-table-and-4-chairs-oak-veneer-brown-stained-anthracite__0786349_pe762971_s5.jpg?f=xu",
+      vimg5:
+        "https://www.ikea.com/in/en/images/products/moerbylanga-leifarne-table-and-4-chairs-brown-white__0738078_pe741355_s5.jpg?f=xu",
+    },
+  ];
+
+  // mapping data to page
+  display(data);
+  function display(arr) {
+    var products = document.querySelector(".products");
+    products.innerHTML = null
+    arr.forEach((item, index) => {
+      // console.log(item)
+      let box = document.createElement("div");
+      box.id = "box";
+      box.addEventListener("click", ()=>{
+        goto(index)
+      })
+      let img1 = document.createElement("img");
+      img1.id = "img1";
+      img1.src = item.img2;
+      let img2 = document.createElement("img");
+      img2.id = "img2";
+      img2.src = item.img1;
+      let title = document.createElement("p");
+      title.id = "title";
+      title.textContent = item.title;
+      let des = document.createElement("p");
+      des.id = "des";
+      des.textContent = item.des;
+      let pdiv = document.createElement("div");
+      pdiv.id = "pdiv";
+      let rs = document.createElement("p");
+      rs.id = "rs";
+      rs.textContent = "Rs.";
+      let price = document.createElement("p");
+      price.id = "proprice";
+      price.textContent = item.price;
+      pdiv.append(rs, price);
+      box.append(img1, img2, title, des, pdiv);
+      products.append(box);
+    });
+  }
+
+  function goto(index){
+    if(index==2){
+      window.location.href = "table.html"
+    }
+    if(index==1){
+      window.location.href = "table 2.html"
+    }
+  }
+
+  
+  
+  document.getElementById("low").addEventListener("click", ()=>{
+    // let data1 = [{...data}]
+    let data1 = [...data]
+    // console.log(data1)
+    data1 = data1.sort((a,b)=>{
+      return a.price - b.price
+    })
+    display(data1)
+  })
+
+  document.getElementById("high").addEventListener("click", ()=>{
+    let data2 = [...data]
+    data2 = data2.sort((a,b)=>{
+      return b.price - a.price
+    })
+    display(data2)
+  })
+
+  document.getElementById("matchCall").addEventListener("click", ()=>{
+    // let data2 = data.sort((a,b)=>{
+    //   return b.price - a.price
+    // })
+    console.log("Hello")
+    console.log(data)
+    display(data)
+  })
+
+  document.querySelector("input[name=p0]").addEventListener("change", function(){
+    // console.log("Hell")
+    if(this.checked){
+      let data1 = [...data];
+      data1 = data1.filter((item)=>{
+        if(item.price>0 && item.price<=9999){
+          return item;
+        }
+      })
+      console.log(data)
+      display(data1)
+    }else{
+      display(data)
+    }
+  });
+
+  document.querySelector("input[name=p10000]").addEventListener("change", function(){
+    // console.log("Hell")
+    if(this.checked){
+      let data1 = [...data];
+      data1 = data1.filter((item)=>{
+        if(item.price>=10000 && item.price<=19999){
+          return item;
+        }
+      })
+      console.log(data)
+      display(data1)
+    }else{
+      display(data)
+    }
+  });
+
+  document.querySelector("input[name=p20000]").addEventListener("change", function(){
+    // console.log("Hell")
+    if(this.checked){
+      let data1 = [...data];
+      data1 = data1.filter((item)=>{
+        if(item.price>=20000 && item.price<=29999){
+          return item;
+        }
+      })
+      console.log(data)
+      display(data1)
+    }else{
+      display(data)
+    }
+  });
+
+  document.querySelector("input[name=p30000]").addEventListener("change", function(){
+    // console.log("Hell")
+    if(this.checked){
+      let data1 = [...data];
+      data1 = data1.filter((item)=>{
+        if(item.price>=30000 && item.price<=39999){
+          return item;
+        }
+      })
+      console.log(data)
+      display(data1)
+    }else{
+      display(data)
+    }
+  });
+
+  document.querySelector("input[name=p40000]").addEventListener("change", function(){
+    // console.log("Hell")
+    if(this.checked){
+      let data1 = [...data];
+      data1 = data1.filter((item)=>{
+        if(item.price>=40000 ){
+          return item;
+        }
+      })
+      console.log(data)
+      display(data1)
+    }else{
+      display(data)
+    }
+  });
+  // document.getElementById("#img2").style.zIndex
+  
+  document.getElementById("room").addEventListener("click", ()=>{
+    let arr = document.querySelectorAll("#img2");
+    console.log(arr)
+    arr.forEach((item)=>{
+      item.style.zIndex = "-2"
+
+    })
+    document.getElementById("product").style.border = "none"
+  })
+  document.getElementById("product").addEventListener("click", ()=>{
+    let arr = document.querySelectorAll("#img2");
+    console.log(arr)
+    arr.forEach((item)=>{
+      item.style.zIndex = "0"
+    })
+    document.getElementById("product").style.border = "1px solid black"
+  })
+
+   // footer part
+  import footer from "./components/footer/footer.js"
+  document.getElementById("footer").innerHTML = footer();
+
+  
+
+    // login slide setup
+
+  import left from "./components/side nav/homenav.js"
+  // console.log(left);
+  document.getElementById("mainnav").innerHTML = left();
+  document.querySelector(".line3").addEventListener("click", ()=>{
+    document.querySelector(".main").style.transform = "translateX(0px)";
+  })
+  document.querySelector(".close").addEventListener("click", ()=>{
+    document.querySelector(".main").style.transform = "translateX(-100%)";
+  })
+
+  // nav bar setup
+  import nav from "./components/navbar/nav.js";
+  console.log(nav);
+  document.getElementById("tnav").innerHTML = nav();
+
+  document.querySelector(".navlogo").addEventListener("click", ()=>{
+    window.location.href = "home.html"
+  })
+
+  // goto cart
+  document.getElementById("gocart").onclick = ()=>{
+    window.location.href = "cart.html"
+  }
+</script>
