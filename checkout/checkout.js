@@ -98,3 +98,12 @@ document.getElementById("apply").onclick = ()=>{
 }
 
 // document.getElementById("ttl-p").innerText = total_p.price;
+
+document.getElementById("gotoAdd").addEventListener("click", ()=> {
+  window.location.href = "./address/add.html"
+})
+
+let data = JSON.parse(localStorage.getItem("ikea_user"));
+let name = data.name;
+console.log(name)
+document.getElementById("user").textContent = name

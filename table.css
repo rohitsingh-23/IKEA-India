@@ -1,41 +1,36 @@
-#container{
-    position: relative;
-    left: 7%;
-    /* border: 1px solid red; */
-    height: 800px;
-    width: 91%;
-    /* margin-top: 15px; */
+#container {
+  position: relative;
+  left: 7%;
+  /* border: 1px solid red; */
+  height: 800px;
+  width: 91%;
+  /* margin-top: 15px; */
 }
 #dinLeft {
-  
   vertical-align: top;
   display: inline-block;
   height: 800px;
   overflow-y: scroll;
   width: 64%;
 }
-#dinLeft::-webkit-scrollbar{
+#dinLeft::-webkit-scrollbar {
   width: 0px;
   /* background: transparent; */
 }
-
 
 #dinRight {
   width: 34%;
   height: 750px;
 
   display: inline-block;
-
 }
 
 .descrText {
   font-size: 10px;
   color: gray;
-
 }
 
 .sameImg {
-
   width: 49%;
   display: inline-block;
   height: 390px;
@@ -45,7 +40,6 @@
 }
 
 #uButton {
-
   margin: auto;
   border: none;
 
@@ -59,19 +53,17 @@
   margin: auto;
 
   width: 150px;
-
 }
-.pclose:hover{
+.pclose:hover {
   cursor: pointer;
 }
-.mclose:hover{
+.mclose:hover {
   cursor: pointer;
 }
-#ciross:hover{
+#ciross:hover {
   cursor: pointer;
 }
-#numFig{
-
+#numFig {
   background-color: black;
   color: white;
   width: 70px;
@@ -79,112 +71,99 @@
   font-size: 10px;
   text-align: center;
 }
-.headBut{
+.headBut {
   /* border: 1px solid red; */
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.headBut>p{
+.headBut > p {
   display: inline-block;
   font-size: 30px;
   font-weight: bold;
 }
-.arrow{
+.arrow {
   font-size: 32px;
   margin-right: 15px;
-  
 }
-.arrow:hover{
+.arrow:hover {
   cursor: pointer;
 }
-.arrBut{
+.arrBut {
   font-size: 30px;
   font-weight: bolder;
   margin-left: 550px;
   border: none;
   background: transparent;
-
-  
 }
-.arrBut1{
+.arrBut1 {
   font-size: 30px;
   font-weight: bolder;
   margin-left: 650px;
   border: none;
   background: transparent;
- 
- 
 }
-.imgCon{
-
+.imgCon {
   width: 98%;
   height: 320px;
-
-
-
 }
-.smImg{
-
+.smImg {
   height: 100%;
   width: 24%;
   display: inline-block;
   /* background-color: aqua; */
   vertical-align: top;
 }
-.desTion{
+.desTion {
   font-size: 15px;
   color: grey;
 }
-.prTitle{
- font-weight: bold;
- font-size: 15px;
+.prTitle {
+  font-weight: bold;
+  font-size: 15px;
 }
-.pricE{
- font-weight: bold;
+.pricE {
+  font-weight: bold;
 }
-#prTitles{
- font-weight: bold;
- font-size: 15px;
- display: inline-block;
- 
+#prTitles {
+  font-weight: bold;
+  font-size: 15px;
+  display: inline-block;
 }
-#pricEs{
-font-weight: bold;
-display: inline-block;
-margin-left: 400px;
-
+#pricEs {
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 400px;
 }
-.inlBlock{
- display: inline-block;
+.inlBlock {
+  display: inline-block;
 }
-#butCheck{
- border: none;
+#butCheck {
+  border: none;
 }
-#idInp{
- border: none;
- border-bottom: 1px solid grey;
- width: 53px;
+#idInp {
+  border: none;
+  border-bottom: 1px solid grey;
+  width: 53px;
 }
-#butCart{
-border: none;
- border-radius: 20px;
- width: 300px;
- text-align: center;
- background-color: #0058A3;
- color: white;
- margin-left: 90px;
- height: 40px;
-
+#butCart {
+  border: none;
+  border-radius: 20px;
+  width: 300px;
+  text-align: center;
+  background-color: #0058a3;
+  color: white;
+  margin-left: 90px;
+  height: 40px;
 }
-#butCart:hover{
+#butCart:hover {
   cursor: pointer;
   background-color: #004887;
 }
-#footer{
+#footer {
   margin-top: 55px;
 }
-.left{
+.left {
   position: relative;
   top: 25px;
   left: 50px;
@@ -192,4 +171,15 @@ border: none;
   height: 100%;
   position: fixed;
   /* border: 1px solid red; */
+}
+
+#butCart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#heart {
+  font-size: 12px;
+  margin-right: 8px;
 }

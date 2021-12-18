@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Check Out</title>
-    <link rel="stylesheet" href="checkout.css" />
+    <title>Address</title>
+    <link rel="stylesheet" href="add.css" />
   </head>
   <body>
     <div class="checkout-main">
@@ -16,7 +16,7 @@
           alt=""
         />
 
-        <div><a id=user href="">Login</a></div>
+        <div><a id="user" href="">Login</a></div>
       </div>
 
       <!-- -------nav bar payment -->
@@ -39,53 +39,35 @@
       </div>
 
       <div class="main-heading">
-        <h1>Your shopping cart</h1>
+        <h1>Your information</h1>
       </div>
-
-      <div class="product">
-        <div class="cart-shop">
-          <p>1 Products in shopping cart</p>
-        </div>
-        <hr />
-        <div class="amount-cart">
-          <h2>Total amount:</h2>
-          <h2 id="total"></h2>
-        </div>
-        <p class="f11">All prices are inclusive of taxes</p>
-      </div>
-
-      <!-- button place order -->
-
-      <div class="btn">
-        <button id="gotoAdd" class="place-order">Place order</button>
-      </div>
-
       <!-- main product added here -->
 
-      <div id="main-p" class="main-product"></div>
-
-      <!-- promo code here -->
-
-      <div class="promo">
-        <div class="left-promo">
-          <p>Add your promo/coupon code here</p>
-          <input id="coupan" type="text" placeholder="Add Promo/Coupon" />
-          <button id="apply">Apply</button>
-          <p>Only one promo/coupon code per order</p>
-        </div>
-
-        <!-- ... -->
-        <div class="right-promo">
+      <div id="main-p" class="main-product">
+        <div class="info">
+          <h4 class="h4">Enter your details</h4>
           <hr />
-          <div class="amount-cart">
-            <h2>Total amount:</h2>
-            <h2 id="ttl-p"></h2>
+
+          <div class="from">
+            <label for="">Name: </label>
+            <input type="text" id="name"/>
+
+            <label for="">Address: </label>
+            <input type="text" id="add"/>
+
+            <label for="">Phone No: </label>
+            <input type="number" id="phone"/>
+
+            <label for="">Email Id: </label>
+            <input type="email" id="email"/>
+
+            <label for="">State: </label>
+            <input type="text" id="state"/>
+
+            <input onclick="gopay()" type="submit" value="Proceed to Payment" />
           </div>
         </div>
       </div>
-
-      <!-- ....policy -->
-      <div class="plc"><p>All prices are inclusive of taxes</p></div>
 
       <!-- payment icon -->
 
@@ -124,13 +106,6 @@
         </div>
 
         <p>We accept the above payment methods</p>
-      </div>
-
-      <!-- two button -->
-
-      <div class="two-buttons">
-        <div class="bt"><button>Edit order</button></div>
-        <button class="place-order">Place order</button>
       </div>
 
       <!-- info -->
@@ -173,4 +148,4 @@
   </body>
 </html>
 
-<script src="checkout.js"></script>
+<script src="add.js"></script>

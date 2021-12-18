@@ -96,7 +96,7 @@ function product(){
     </div>
     <button class="pdropdown-btn">
       Material & care
-      <i class="fa fa-caret-down"></i>
+      <div id="rotate"><i  class="fa fa-caret-down"></i></div>
     </button>
     <div class="pdropdown-container">
       <div>

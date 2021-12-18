@@ -34,7 +34,7 @@
       src="https://kit.fontawesome.com/07381c3866.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="./components/side nav/homenav.css">
+    <link rel="stylesheet" href="./components/side nav/homenav.css" />
     <title>Table</title>
     <style></style>
   </head>
@@ -286,7 +286,16 @@
           />
           <button class="inlBlock" id="butCheck">Check</button>
           <br /><br />
-          <button id="butCart">♡ Add to shopping cart</button>
+          <button id="butCart">
+            <span id="heart" class="material-icons-outlined">
+              favorite_border </span
+            >Add to shopping cart
+          </button>
+
+          <!-- <button id="butCart">
+            <span id="heart" class="material-icons-outlined"> favorite </span>Add to
+            shopping cart
+          </button> -->
         </div>
 
         <!-- right ------------------------------------------------------------------------------->
@@ -326,6 +335,11 @@
 
     localdata.push(data);
     localStorage.setItem("cart-item1", JSON.stringify(localdata));
+
+    document.getElementById(
+      "butCart"
+    ).innerHTML = `<span id="heart" class="material-icons-outlined"> favorite </span>Add to
+            shopping cart`;
 
     alert("Item added successfully");
   });
@@ -395,6 +409,7 @@
       var dropdownContent = this.nextElementSibling;
       if (dropdownContent.style.display === "block") {
         dropdownContent.style.display = "none";
+        // document.getElementById("rotate").transform = "rotate(180deg)"
       } else {
         dropdownContent.style.display = "block";
       }
@@ -416,23 +431,23 @@
   document.getElementById("footer").innerHTML = footer();
 
   // goto cart
-  document.getElementById("gocart").onclick = ()=>{
-    window.location.href = "cart.html"
-  }
+  document.getElementById("gocart").onclick = () => {
+    window.location.href = "cart.html";
+  };
 
   // slide home setup
-  import left from "./components/side nav/homenav.js"
+  import left from "./components/side nav/homenav.js";
   // console.log(left);
   document.getElementById("mainnav").innerHTML = left();
 
-  document.querySelector(".line3").addEventListener("click", ()=>{
+  document.querySelector(".line3").addEventListener("click", () => {
     // document.querySelector(".main").style.display = "block";
     // document.querySelector(".main").style.transform = "scaleX(1)";
     document.querySelector(".main").style.transform = "translateX(0px)";
-  })
-  document.querySelector(".close").addEventListener("click", ()=>{
+  });
+  document.querySelector(".close").addEventListener("click", () => {
     // document.querySelector(".main").style.display = "none";
     // document.querySelector(".main").style.transform = "scaleX(0)";
     document.querySelector(".main").style.transform = "translateX(-100%)";
-  })
+  });
 </script>

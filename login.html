@@ -226,7 +226,14 @@
         // localStorage.setItem("name", JSON.stringify(final));
         // document.getElementById("userName").textContent = final
         console.log("user data", data)
-        alert("Login Successfull")
+        localStorage.setItem("ikea_user", JSON.stringify(data));
+
+        if(data.message == "Invalid token for user"){
+            alert(`Invalid token for user`)
+        }else{
+            alert(`Dear ${data.name} you logged in successfully`)
+        }
+        
     }
 
     document.getElementById("back").onclick = ()=>{
