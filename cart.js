@@ -1,9 +1,12 @@
 var cart_local = JSON.parse(localStorage.getItem("cart-item1")) || [];
-var update_price = {};
 
-console.log(cart_local.length);
+var update_price = [];
+var priceTotal = 0;
+
+// console.log(cart_local.length);
 
 console.log(cart_local);
+
 display(cart_local);
 
 function display(arr) {
@@ -63,7 +66,7 @@ function display(arr) {
 
     delete_img.src = "./cart/delete.png";
 
-    delete_img.src = "./delete.png";
+    // delete_img.src = "./delete.png";
     // delete_img.addEventListener("click", ()=>{
     //   console.log(event);
     //   let path = event.path[3].innerText
@@ -131,7 +134,14 @@ function display(arr) {
     //appending price
 
     price.innerText = item.price;
-    document.getElementById("prc-cart").innerText = item.price;
+    // document.getElementById("prc-cart").innerText = item.price;
+
+    priceTotal += item.price1;
+    // console.log(priceTotal);
+
+    document.getElementById("prc-cart").innerText = `Rs. ${priceTotal
+      .toFixed(2)
+      .replace(/\d(?=(\d{3})+\.)/g, "$&,")}`;
 
     select.addEventListener("change", function () {
       var newPrice = item.price1 * select.value;
@@ -139,7 +149,23 @@ function display(arr) {
         .toFixed(2)
         .replace(/\d(?=(\d{3})+\.)/g, "$&,")}`;
 
-      document.getElementById("prc-cart").innerText = `Rs. ${newPrice
+      item.total = newPrice;
+      item.it = select.value;
+
+      console.log(item);
+
+      // console.log(select.value);
+
+      // update_price.push(priceData);
+
+      localStorage.setItem("cart-item1", JSON.stringify(cart_local));
+      // console.log(update_price);
+
+      // priceTotal = 0;
+      priceTotal += newPrice;
+      // console.log(newPrice);
+      // console.log(priceTotal);
+      document.getElementById("prc-cart").innerText = `Rs. ${priceTotal
         .toFixed(2)
         .replace(/\d(?=(\d{3})+\.)/g, "$&,")}`;
 
@@ -168,10 +194,12 @@ function display(arr) {
     // main.append(cart_details);
 
     document.getElementById("gocheck").addEventListener("click", () => {
-      update_price.price = document.getElementById("prc-cart").innerText;
+      // update_price.price = document.getElementById("prc-cart").innerText;
       console.log(update_price);
-      localStorage.setItem("price", JSON.stringify(update_price));
+
       window.location.href = "./checkout/checkout.html";
     });
   });
 }
+
+// console.log(priceTotal);
