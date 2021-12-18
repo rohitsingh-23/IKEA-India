@@ -56,7 +56,7 @@ var delete_button = document.createElement("div");
 delete_button.setAttribute("class", "delete-button");
 
 var delete_img = document.createElement("img");
-delete_img.src = "./delete.png";
+delete_img.src = "./cart/delete.png";
 
 var select = document.createElement("select");
 
