@@ -345,3 +345,8 @@
   color: black;
   cursor: pointer;
 }
+
+#gocheck,
+#gocheck p {
+  cursor: pointer;
+}
