@@ -98,3 +98,7 @@ document.getElementById("apply").onclick = ()=>{
 }
 
 // document.getElementById("ttl-p").innerText = total_p.price;
+
+document.getElementById("gotoAdd").addEventListener("click", ()=> {
+  window.location.href = "./address/add.html"
+})

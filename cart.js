@@ -10,7 +10,7 @@ console.log(cart_local);
 display(cart_local);
 
 function display(arr) {
-  document.getElementById("main-wala").innerHTML =null;
+  document.getElementById("main-wala").innerHTML = null;
   arr.forEach((item) => {
     var cart_details = document.createElement("div");
     cart_details.setAttribute("class", "cart-details");
@@ -64,14 +64,14 @@ function display(arr) {
     delete_button.setAttribute("class", "delete-button");
 
     var delete_img = document.createElement("img");
-    delete_img.id = "dimage"
+    delete_img.id = "dimage";
 
     delete_img.src = "./cart/delete.png";
 
     // delete onclick function
-    delete_img.addEventListener("click", ()=>{
-      deleteitem(event)
-    })
+    delete_img.addEventListener("click", () => {
+      deleteitem(event);
+    });
 
     var select = document.createElement("select");
     select.id = "svalue";
@@ -139,20 +139,9 @@ function display(arr) {
     priceTotal += item.price1;
     // console.log(priceTotal);
 
-
-
     document.getElementById("prc-cart").innerText = `Rs. ${priceTotal
       .toFixed(2)
       .replace(/\d(?=(\d{3})+\.)/g, "$&,")}`;
-
-
-
-
-
-
-
-
-
 
     select.addEventListener("change", function () {
       // console.log(select.value)
@@ -162,16 +151,12 @@ function display(arr) {
       // console.log(arr)
 
       let value = document.getElementById("svalue").value;
-      let price = cart_local[0].price1
+      let price = cart_local[0].price1;
 
-      document.getElementById("prc-cart").textContent = `Rs. ${value*price}`;
+      document.getElementById("prc-cart").textContent = `Rs. ${value * price}`;
       // document.getElementById("prc-cart").innerText = `Rs. ${value*price
       //   .toFixed(2)
       //   .replace(/\d(?=(\d{3})+\.)/g, "$&,")}`;
-
-
-
-
 
       var newPrice = item.price1 * select.value;
       price.innerText = `Rs. ${newPrice
@@ -231,28 +216,27 @@ function display(arr) {
   });
 }
 
-
-function deleteitem(event){
+function deleteitem(event) {
   console.log(event);
-      let path = event.path[3].innerText;
-      let pathn = path.split("\n");
-      let title = pathn[0].split(" ")
-      let final = title[0];
-      console.log(final)
-      cart_local  = cart_local.filter((item)=>{
-        let name = item.title.split(" ")[0]
-        // console.log(name);
-        // console.log(item)
-        if(name !== final){
-          return item;
-        }
-      })
-      display(cart_local)
-      // localStorage.setItem("cart-item1", JSON.stringify(cart_local));
-      let value = document.getElementById("svalue").value;
-      let price = cart_local[0].price1
+  let path = event.path[3].innerText;
+  let pathn = path.split("\n");
+  let title = pathn[0].split(" ");
+  let final = title[0];
+  console.log(final);
+  cart_local = cart_local.filter((item) => {
+    let name = item.title.split(" ")[0];
+    // console.log(name);
+    // console.log(item)
+    if (name !== final) {
+      return item;
+    }
+  });
+  display(cart_local);
+  localStorage.setItem("cart-item1", JSON.stringify(cart_local));
+  let value = document.getElementById("svalue").value;
+  let price = cart_local[0].price1;
 
-      document.getElementById("prc-cart").textContent = `RS. ${value*price}`;
+  document.getElementById("prc-cart").textContent = `RS. ${value * price}`;
 }
 
 // console.log(priceTotal);

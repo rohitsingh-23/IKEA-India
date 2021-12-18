@@ -26,7 +26,7 @@
       src="https://kit.fontawesome.com/07381c3866.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="./components/side nav/homenav.css">
+    <link rel="stylesheet" href="./components/side nav/homenav.css" />
     <title>Table</title>
     <style>
       #container {
@@ -179,7 +179,7 @@
         height: 40px;
         cursor: pointer;
       }
-      #butCart:hover{
+      #butCart:hover {
         cursor: pointer;
         background-color: #004887;
       }
@@ -202,6 +202,17 @@
         position: fixed;
         /* border: 1px solid red; */
       }
+
+      #butCart {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #heart {
+        font-size: 12px;
+        margin-right: 8px;
+      }
     </style>
   </head>
   <body>
@@ -209,7 +220,6 @@
 
     <!-- left slide home basic -->
     <div id="mainnav"></div>
-
 
     <div class="left">
       <div><span class="material-icons-outlined line3">menu</span></div>
@@ -417,7 +427,11 @@
           />
           <button class="inlBlock" id="butCheck">Check</button>
           <br /><br />
-          <button id="butCart">♡ Add to shopping cart</button>
+          <button id="butCart">
+            <span id="heart" class="material-icons-outlined">
+              favorite_border </span
+            >Add to shopping cart
+          </button>
           <!-- </div> -->
 
           <!-- right ------------------------------------------------------------------------------->
@@ -463,27 +477,32 @@
     localdata.push(data);
     localStorage.setItem("cart-item1", JSON.stringify(localdata));
 
+    document.getElementById(
+      "butCart"
+    ).innerHTML = `<span id="heart" class="material-icons-outlined"> favorite </span>Add to
+            shopping cart`;
+
     console.log(localdata);
     alert("Item added successfully");
   });
   // goto cart
-  document.getElementById("gocart").onclick = ()=>{
-    window.location.href = "cart.html"
-  }
+  document.getElementById("gocart").onclick = () => {
+    window.location.href = "cart.html";
+  };
 
   // slide home setup
-  import left from "./components/side nav/homenav.js"
+  import left from "./components/side nav/homenav.js";
   // console.log(left);
   document.getElementById("mainnav").innerHTML = left();
 
-  document.querySelector(".line3").addEventListener("click", ()=>{
+  document.querySelector(".line3").addEventListener("click", () => {
     // document.querySelector(".main").style.display = "block";
     // document.querySelector(".main").style.transform = "scaleX(1)";
     document.querySelector(".main").style.transform = "translateX(0px)";
-  })
-  document.querySelector(".close").addEventListener("click", ()=>{
+  });
+  document.querySelector(".close").addEventListener("click", () => {
     // document.querySelector(".main").style.display = "none";
     // document.querySelector(".main").style.transform = "scaleX(0)";
     document.querySelector(".main").style.transform = "translateX(-100%)";
-  })
+  });
 </script>
