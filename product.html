@@ -8,6 +8,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
     <link rel="icon" href="https://www.ikea.com/in/en/static/ikea-logo.f7d9229f806b59ec64cb.svg">
     <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="./components/footer/footer.css">
+    <script src="https://kit.fontawesome.com/07381c3866.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./components/navbar/nav.css">
     <title>Furniture sets</title>
   </head>
   <body>
@@ -112,7 +115,7 @@
       <div class="function">
         <div class="leftfunc">
           <button id="sort">
-            Sort <span class="material-icons-outlined">expand_more </span>
+            Sort <span id="rsort" class="material-icons-outlined">expand_more </span>
           </button>
           <!-- Drop down options -->
           <div id="sortdrop">
@@ -163,7 +166,7 @@
           </div>
 
           <button id="cat">
-            Category <span class="material-icons-outlined">expand_more </span>
+            Category <span id="rcat" class="material-icons-outlined">expand_more </span>
           </button>
           <!-- Category drop down -->
           <div id="catdrop">
@@ -195,7 +198,7 @@
 
           <button id="seats">
             Number of seats
-            <span class="material-icons-outlined">expand_more </span>
+            <span id="rseat" class="material-icons-outlined">expand_more </span>
           </button>
           <!-- Number of seats drop -->
           <div id="seatsdrop">
@@ -218,7 +221,7 @@
           </div>
 
           <button id="price">
-            Price <span class="material-icons-outlined">expand_more </span>
+            Price <span id="rprice" class="material-icons-outlined">expand_more </span>
           </button>
           <!-- price drop -->
           <div id="pricedrop">
@@ -245,7 +248,7 @@
           </div>
 
           <button id="mat">
-            Material <span class="material-icons-outlined">expand_more </span>
+            Material <span id="rmat" class="material-icons-outlined">expand_more </span>
           </button>
           <!-- material drop -->
           <div id="matdrop">
@@ -286,17 +289,22 @@
         </div>
         <div class="rightfunc">
           <p>117 items</p>
-          <button>Product</button>
-          <button>Room</button>
+          <div id="pr">
+            <button id="product">Product</button>
+            <button id="room">Room</button>
+          </div>
+          
         </div>
       </div>
       <hr />
       <div class="products"></div>
     </div>
+    <div id="footer"></div>
+    
   </body>
 </html>
 
-<script>
+<script type="module">
   let sortvalue = false;
   let sort = document.getElementById("sort").addEventListener("click", () => {
     if (sortvalue) {
@@ -308,10 +316,12 @@
       document.getElementById("sortdrop").style.display = "block";
       document.getElementById("sort").style.backgroundColor = "black";
       document.getElementById("sort").style.color = "white";
+      document.getElementById("rsort").style.transform = "rotate(180deg)"
     } else {
       document.getElementById("sortdrop").style.display = "none";
       document.getElementById("sort").style.backgroundColor = "#efefef";
       document.getElementById("sort").style.color = "black";
+      document.getElementById("rsort").style.transform = "rotate(0deg)"
     }
   });
 
@@ -326,10 +336,12 @@
       document.getElementById("catdrop").style.display = "block";
       document.getElementById("cat").style.backgroundColor = "black";
       document.getElementById("cat").style.color = "white";
+      document.getElementById("rcat").style.transform = "rotate(180deg)"
     } else {
       document.getElementById("catdrop").style.display = "none";
       document.getElementById("cat").style.backgroundColor = "#efefef";
       document.getElementById("cat").style.color = "black";
+      document.getElementById("rcat").style.transform = "rotate(0deg)"
     }
   });
 
@@ -344,10 +356,12 @@
       document.getElementById("seatsdrop").style.display = "block";
       document.getElementById("seats").style.backgroundColor = "black";
       document.getElementById("seats").style.color = "white";
+      document.getElementById("rseat").style.transform = "rotate(180deg)"
     } else {
       document.getElementById("seatsdrop").style.display = "none";
       document.getElementById("seats").style.backgroundColor = "#efefef";
       document.getElementById("seats").style.color = "black";
+      document.getElementById("rseat").style.transform = "rotate(0deg)"
     }
   });
 
@@ -362,10 +376,12 @@
       document.getElementById("pricedrop").style.display = "block";
       document.getElementById("price").style.backgroundColor = "black";
       document.getElementById("price").style.color = "white";
+      document.getElementById("rprice").style.transform = "rotate(180deg)"
     } else {
       document.getElementById("pricedrop").style.display = "none";
       document.getElementById("price").style.backgroundColor = "#efefef";
       document.getElementById("price").style.color = "black";
+      document.getElementById("rprice").style.transform = "rotate(0deg)"
     }
   });
 
@@ -380,15 +396,17 @@
       document.getElementById("matdrop").style.display = "block";
       document.getElementById("mat").style.backgroundColor = "black";
       document.getElementById("mat").style.color = "white";
+      document.getElementById("rmat").style.transform = "rotate(180deg)"
     } else {
       document.getElementById("matdrop").style.display = "none";
       document.getElementById("mat").style.backgroundColor = "#efefef";
       document.getElementById("mat").style.color = "black";
+      document.getElementById("rmat").style.transform = "rotate(0deg)"
     }
   });
 
   // dummy data
-  data = [
+  let data = [
     {
       img1: "https://www.ikea.com/in/en/images/products/taernoe-table-2-chairs-outdoor-red-light-brown-stained__0776099_pe757709_s5.jpg?f=xxs",
       img2: "https://www.ikea.com/in/en/images/products/taernoe-table-2-chairs-outdoor-red-light-brown-stained__0917464_ph168428_s5.jpg?f=xxs",
@@ -733,6 +751,9 @@
     if(index==2){
       window.location.href = "table.html"
     }
+    if(index==1){
+      window.location.href = "table 2.html"
+    }
   }
 
   document.querySelector(".navlogo").addEventListener("click", ()=>{
@@ -845,5 +866,27 @@
       display(data)
     }
   });
+  // document.getElementById("#img2").style.zIndex
   
+  document.getElementById("room").addEventListener("click", ()=>{
+    let arr = document.querySelectorAll("#img2");
+    console.log(arr)
+    arr.forEach((item)=>{
+      item.style.zIndex = "-2"
+
+    })
+    document.getElementById("product").style.border = "none"
+  })
+  document.getElementById("product").addEventListener("click", ()=>{
+    let arr = document.querySelectorAll("#img2");
+    console.log(arr)
+    arr.forEach((item)=>{
+      item.style.zIndex = "0"
+    })
+    document.getElementById("product").style.border = "1px solid black"
+  })
+
+   // footer part
+  import footer from "./components/footer/footer.js"
+  document.getElementById("footer").innerHTML = footer();
 </script>

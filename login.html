@@ -124,15 +124,15 @@
     <div class = "rightLogin">
         <div id = "rightPart">
             <br>
-            <input type="text" placeholder="Email or Verified Mobile Number" class = "inputss">
+            <input id="username" type="text" placeholder="Email or Verified Mobile Number" class = "inputss">
             
             <div style="color: gray;margin-top: 5px;">Login <a href=""><font color = "black">with an OTP</font></a></div>
             <br><br><br>
-            <input type="password" class = "inputss" placeholder="Password">
+            <input id="password" type="password" class = "inputss" placeholder="Password">
             <div style="margin-top: 5px;"><a href = ""><font color = "black">Forget Your Password?</font></a></div>
             <button id = "buttonBlue">Continue</button><br><br><br>
             <div class = "genText">Do not have an IKEA account? Create one now:</div><br><br><br>
-           <button class = "invButton">I'm buying for my home</button><br><br><br>
+           <button id="forhome" class = "invButton">I'm buying for my home</button><br><br><br>
            <button class = "invButton">I'm buying for my company</button>
         </div>
     </div>
@@ -141,3 +141,61 @@
 
 </body>
 </html>
+
+<script>
+    document.getElementById("forhome").addEventListener("click", ()=>{
+        window.location.href = "login home.html"
+    })  
+    // login portion
+
+    document.querySelector("#buttonBlue").addEventListener("click", Login);
+  async function Login(){
+      console.log("Hello")
+        let login_data = {
+            username: document.getElementById("username").value,
+            password: document.getElementById("password").value
+        }
+
+        login_data = JSON.stringify(login_data);
+
+        //link 
+        let login_api = `https://masai-api-mocker.herokuapp.com/auth/login`
+
+        let response = await fetch(login_api, {
+            method: "POST",
+            body: login_data,
+            headers: {
+                "Content-type": "application/json"
+            }
+        });
+
+        let data = await response.json();
+        console.log(data)
+
+
+        let username = document.getElementById("username").value;
+        getProfile(username, data.token)
+    }
+
+    async function getProfile(username, token){
+        let api = `https://masai-api-mocker.herokuapp.com/user/${username}`;
+
+        let response = await fetch(api, {
+            // method: "POST",
+
+            headers: {
+                "Content-type": "application/json",
+                "Authorization": `Bearer ${token}`,
+            },
+            
+        });
+
+        let data = await response.json();
+        // let name = data.name.split(" ");
+        // let final = name.shift()
+        // localStorage.setItem("name", JSON.stringify(final));
+        // document.getElementById("userName").textContent = final
+        console.log("user data", data)
+        alert("Login Successfull")
+    }
+</script>

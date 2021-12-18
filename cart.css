@@ -11,11 +11,11 @@
 }
 
 .cart-main {
-  /* border: 1px solid black; */
+  border: 1px solid black;
   width: 70%;
   margin: auto;
   margin-top: 50px;
-  height: 710px;
+  /* height: 710px; */
   display: flex;
   flex-direction: column;
 
@@ -86,6 +86,8 @@
 
 .cart-details {
   /* border: 1px solid rgb(109, 7, 100); */
+  margin-top: 20px;
+  margin-bottom: 20px;
   height: 200px;
   width: 100%;
   /* margin-bottom: 20px; */
