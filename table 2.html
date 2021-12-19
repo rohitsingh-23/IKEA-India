@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./components/navbar/nav.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <link rel="stylesheet" href="./components/footer/footer.css" />
+    <script
+      src="https://kit.fontawesome.com/07381c3866.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./components/side nav/homenav.css" />
+    <link rel="icon" href="https://www.ikea.com/in/en/static/ikea-logo.f7d9229f806b59ec64cb.svg">
+    <title>Wardrobe</title>
+    <style>
+      #container {
+        position: relative;
+        left: 7%;
+        /* border: 1px solid red; */
+        height: 800px;
+        width: 91%;
+        /* margin-top: 15px; */
+      }
+      #dinLeft {
+        vertical-align: top;
+        display: inline-block;
+        height: 800px;
+        overflow-y: scroll;
+        width: 64%;
+      }
+      #dinLeft::-webkit-scrollbar {
+        width: 0px;
+        /* background: transparent; */
+      }
+
+      #dinRight {
+        width: 34%;
+        height: 750px;
+
+        display: inline-block;
+      }
+
+      .descrText {
+        font-size: 10px;
+        color: gray;
+      }
+
+      .sameImg {
+        width: 49%;
+        display: inline-block;
+        height: 390px;
+      }
+      .sameImg:hover {
+        cursor: pointer;
+      }
+
+      #uButton {
+        margin: auto;
+        border: none;
+
+        font-size: 13px;
+        text-align: center;
+
+        font-weight: bold;
+      }
+
+      #buttonDiv {
+        margin: auto;
+
+        width: 150px;
+      }
+      #numFig {
+        background-color: black;
+        color: white;
+        width: 70px;
+        height: 17px;
+        font-size: 10px;
+        text-align: center;
+      }
+      .headBut {
+        /* border: 1px solid red; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .headBut > p {
+        display: inline-block;
+        font-size: 30px;
+        font-weight: bold;
+      }
+      .arrow {
+        font-size: 32px;
+        margin-right: 15px;
+      }
+      .arrow:hover {
+        cursor: pointer;
+      }
+      .arrBut {
+        font-size: 30px;
+        font-weight: bolder;
+        margin-left: 550px;
+        border: none;
+        background: transparent;
+      }
+      .arrBut1 {
+        font-size: 30px;
+        font-weight: bolder;
+        margin-left: 650px;
+        border: none;
+        background: transparent;
+      }
+      .imgCon {
+        width: 98%;
+        height: 320px;
+      }
+      .smImg {
+        height: 100%;
+        width: 24%;
+        display: inline-block;
+        /* background-color: aqua; */
+        vertical-align: top;
+      }
+      .desTion {
+        font-size: 15px;
+        color: grey;
+      }
+      .prTitle {
+        font-weight: bold;
+        font-size: 15px;
+      }
+      .pricE {
+        font-weight: bold;
+      }
+      #prTitles {
+        font-weight: bold;
+        font-size: 15px;
+        display: inline-block;
+      }
+      #pricEs {
+        font-weight: bold;
+        display: inline-block;
+        margin-left: 400px;
+      }
+      .inlBlock {
+        display: inline-block;
+      }
+      #butCheck {
+        border: none;
+      }
+      #idInp {
+        border: none;
+        border-bottom: 1px solid grey;
+        width: 53px;
+      }
+      #butCart {
+        border: none;
+        border-radius: 20px;
+        width: 300px;
+        text-align: center;
+        background-color: #0058a3;
+        color: white;
+        margin-left: 90px;
+        height: 40px;
+        cursor: pointer;
+      }
+      #butCart:hover {
+        cursor: pointer;
+        background-color: #004887;
+      }
+      #text1 {
+        font-size: 20px;
+        color: darkgray;
+      }
+
+      #footer {
+        margin-top: 70px;
+        width: 97%;
+        margin-left: -2px;
+      }
+      .left {
+        position: relative;
+        top: 25px;
+        left: 50px;
+        width: 6%;
+        height: 100%;
+        position: fixed;
+        /* border: 1px solid red; */
+      }
+
+      #butCart {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #heart {
+        font-size: 12px;
+        margin-right: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="tnav"></div>
+
+    <!-- left slide home basic -->
+    <div id="mainnav"></div>
+
+    <div class="left">
+      <div><span class="material-icons-outlined line3">menu</span></div>
+    </div>
+    <div id="container">
+      <hr />
+      <div>
+        <!-- left ------------------------------------------------------------------------------->
+        <div id="dinLeft">
+          <div class="descrText">
+            Products>Furniture>Outdoor>furniture>Dining sets>PAX Wardrobe
+          </div>
+          <br /><br />
+
+          <div>
+            <div class="sameImg">
+              <img
+                src="https://www.ikea.com/in/en/images/products/pax-wardrobe-black-brown-mehamn-black-brown-stained-ash-effect__0716359_pe730830_s5.jpg?f=xl"
+                alt=""
+                width="100%"
+                height="100%"
+              />
+            </div>
+            <div class="sameImg">
+              <img
+                src="https://www.ikea.com/in/en/images/products/pax-wardrobe-black-brown-mehamn-black-brown-stained-ash-effect__0716358_pe730831_s5.jpg?f=xl"
+                alt=""
+                height="100%"
+                width="100%"
+              />
+            </div>
+          </div>
+
+          <div>
+            <div class="sameImg">
+              <img
+                src="https://www.ikea.com/in/en/images/products/pax-wardrobe-black-brown-mehamn-black-brown-stained-ash-effect__0703984_pe724938_s5.jpg?f=xl"
+                alt=""
+                width="100%"
+                height="100%"
+              />
+            </div>
+            <div class="sameImg">
+              <img
+                src="https://www.ikea.com/in/en/images/products/pax-wardrobe-black-brown-mehamn-black-brown-stained-ash-effect__0703983_pe724937_s5.jpg?f=xl"
+                alt=""
+                height="100%"
+                width="100%"
+              />
+            </div>
+          </div>
+
+          <div>
+            <div class="sameImg">
+              <img
+                src="https://www.ikea.com/in/en/images/products/pax-wardrobe-black-brown-mehamn-black-brown-stained-ash-effect__0916134_ph166617_s5.jpg?f=xl
+                    "
+                alt=""
+                width="100%"
+                height="100%"
+              />
+            </div>
+          </div>
+
+          <br /><br />
+
+          <div id="buttonDiv"></div>
+          <br />
+
+          <div id="text1">
+            Keep it simple. Here's a basic solution to get you started, and
+            space for more <br />interiors if you want to upgrade.
+          </div>
+          <br />
+
+          <div class="descrText">
+            Delivery and assembly prices not included.
+          </div>
+          <br />
+          <div class="descrText">Article Number</div>
+
+          <div id="numFig">693.057.96</div>
+          <br /><br />
+          <div>
+            <hr />
+            <div class="headBut">
+              <p>Product details</p>
+              <div class="arrow">
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <hr />
+            <div class="headBut">
+              <p>Measurements</p>
+              <div class="arrow">
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </div>
+            </div>
+          </div>
+
+          <br /><br />
+          <div>
+            <div class="headBut">
+              <p>Reviews</p>
+              <div class="arrow">
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </div>
+            </div>
+            <div>★★★★★(5)</div>
+          </div>
+          <br /><br />
+          <div>
+            <div class="headBut" style="font-size: 25px; font-weight: bold">
+              Similar products
+            </div>
+          </div>
+
+          <br /><br />
+          <div class="imgCon">
+            <div class="smImg">
+              <img
+                src="https://www.ikea.com/in/en/images/products/pax-wardrobe-hasvik-brown-stained-ash-effect__0716059_pe730674_s5.jpg?f=xxxs"
+                alt=""
+                height="50%"
+                width="100%"
+              />
+              <div class="prTitle">PAX</div>
+              <div class="desTion">Wardrobe150x66x236 cm (59x26x93 1/8 ")</div>
+              <div class="pricE"><font size="1px">Rs.</font>30,950</div>
+            </div>
+
+            <div class="smImg">
+              <img
+                src="https://www.ikea.com/in/en/images/products/platsa-wardrobe-white-fonnes-white__0664325_pe712698_s5.jpg?f=xxxs"
+                alt=""
+                height="50%"
+                width="100%"
+              />
+              <div class="prTitle">PLATSA</div>
+              <div class="desTion">
+                Wardrobe240x57x251 cm (94 1/2x22 1/2x98 7/8 ")
+              </div>
+              <div class="pricE"><font size="1px">Rs.</font>29,950</div>
+            </div>
+
+            <div class="smImg">
+              <img
+                src="https://www.ikea.com/in/en/images/products/pax-wardrobe-black-brown-hasvik-black-brown-stained-ash-effect__0716366_pe730842_s5.jpg?f=xxxs"
+                alt=""
+                height="50%"
+                width="100%"
+              />
+              <div class="prTitle">PAX</div>
+              <div class="desTion">Wardrobe150x66x201 cm (59x26x79 1/4 ")</div>
+              <div class="pricE"><font size="1px">Rs.</font>26,850</div>
+            </div>
+
+            <div class="smImg">
+              <img
+                src="https://www.ikea.com/in/en/images/products/pax-wardrobe-white-mehamn__0716388_pe730856_s5.jpg?f=xxxs"
+                alt=""
+                height="50%"
+                width="100%"
+              />
+              <div class="prTitle">PAX</div>
+              <div class="desTion">
+                Wardrobe250x66x201 cm (98 3/8x26x79 1/4 ")
+              </div>
+              <div class="pricE"><font size="1px">Rs.</font>58,300</div>
+            </div>
+          </div>
+        </div>
+        <!-- left ------------------------------------------------------------------------------->
+
+        <!-- right ------------------------------------------------------------------------------->
+
+        <div id="dinRight">
+          <br /><br /><br />
+
+          <div id="prTitles">PAX</div>
+          <div id="pricEs"><font size="1px">Rs.</font>40,250</div>
+          <div class="desTion">
+            Wardrobe, black-brown/Mehamn<br />black-brown stained ash effect
+            <br /><u>150x66x236 cm (59x26x93 1/8 ")</u>
+          </div>
+          <br />
+          <div class="desTion">Price incl. of all taxes</div>
+
+          <br /><br /><br />
+          <div class="desTion">
+            <b> ⓘ </b>Interior accessories that help you organise inside your<br />
+            wardrobe are sold separately.
+          </div>
+          <br /><br />
+
+          <div class="inlBlock" class="desTion">Eligible for delivery?</div>
+          <input
+            type="number"
+            placeholder="400001"
+            class="inlBlock"
+            id="idInp"
+          />
+          <button class="inlBlock" id="butCheck">Check</button>
+          <br /><br />
+          <button id="butCart">
+            <span id="heart" class="material-icons-outlined">
+              favorite_border </span
+            >Add to shopping cart
+          </button>
+          <!-- </div> -->
+
+          <!-- right ------------------------------------------------------------------------------->
+        </div>
+      </div>
+    </div>
+    <div id="footer"></div>
+  </body>
+</html>
+
+<script type="module">
+  import nav from "./components/navbar/nav.js";
+  console.log(nav);
+  document.getElementById("tnav").innerHTML = nav();
+  import footer from "./components/footer/footer.js";
+  document.getElementById("footer").innerHTML = footer();
+
+  document.querySelector(".navlogo").addEventListener("click", () => {
+    window.location.href = "home.html";
+  });
+
+  let localdata = JSON.parse(localStorage.getItem("cart-item1")) || [];
+
+  let data = {
+    title: "PAX",
+    set: "Wardrobe",
+    color:
+      "black-brown black-brown stained ash effect, Mehamn black-brown stained ash effect",
+    dimension: '150x66x236 cm (59x26x93 1/8 ")',
+    random: "693.057.96",
+    weight: "177.83 Kg per piece",
+    weight1: 177.83,
+    img: "https://secure.ikea.com/in/en/images/products/pax-wardrobe__0716359_PE730830_S3.JPG",
+    price: "Rs.40,250.00",
+    price1: 40250,
+  };
+
+  var gotocart = document.getElementById("butCart");
+
+  gotocart.addEventListener("click", () => {
+    var chair = document.getElementById("prTitles").innerText;
+
+    localdata.push(data);
+    localStorage.setItem("cart-item1", JSON.stringify(localdata));
+
+    document.getElementById(
+      "butCart"
+    ).innerHTML = `<span id="heart" class="material-icons-outlined"> favorite </span>Add to
+            shopping cart`;
+
+    console.log(localdata);
+    alert("Item added successfully");
+  });
+  // goto cart
+  document.getElementById("gocart").onclick = () => {
+    window.location.href = "cart.html";
+  };
+
+  // slide home setup
+  import left from "./components/side nav/homenav.js";
+  // console.log(left);
+  document.getElementById("mainnav").innerHTML = left();
+
+  document.querySelector(".line3").addEventListener("click", () => {
+    // document.querySelector(".main").style.display = "block";
+    // document.querySelector(".main").style.transform = "scaleX(1)";
+    document.querySelector(".main").style.transform = "translateX(0px)";
+  });
+  document.querySelector(".close").addEventListener("click", () => {
+    // document.querySelector(".main").style.display = "none";
+    // document.querySelector(".main").style.transform = "scaleX(0)";
+    document.querySelector(".main").style.transform = "translateX(-100%)";
+  });
+</script>

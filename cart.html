@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./components/navbar/nav.css" />
+    <link rel="stylesheet" href="home.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="./components/side nav/homenav.css" />
+    <link rel="icon"  href="https://www.ikea.com/in/en/static/ikea-logo.f7d9229f806b59ec64cb.svg"/>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script  nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="./components/login slide/login.css" />
+    <link rel="stylesheet" href="./components/side nav/product nav.css" />
+    <link rel="stylesheet" href="cart.css" />
+    <link rel="stylesheet" href="./components/footer/footer.css">
+    <link rel="icon" href="https://in.accounts.ikea.com/resources/in/favicon-16x16.png">
+    <title>IKEA India-Affordable home furniture, designs & ideas - IKEA</title>
+    <style>
+      .container {
+        position: relative;
+        left: 7%;
+        width: 93%;
+        /* border: 1px solid; */
+      }
+      hr {
+        /* background-color: red; */
+        border: none;
+        margin-top: 20px;
+        border-top: 1px solid #b8b8b8;
+      }
+      body {
+        width: 1300px;
+        margin: auto;
+      }
+      /* left nav menu css */
+      .left {
+        position: relative;
+        top: 0;
+        width: 6%;
+        height: 100%;
+        position: fixed;
+        /* border: 1px solid red; */
+      }
+      .line3 {
+        margin: 30%;
+        cursor: pointer;
+      }
+      .mainnav {
+        border: 1px solid red;
+      }
+      #footer{
+        margin-left: -27px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="tnav"></div>
+
+    <!-- left nav -->
+    <div class="left">
+      <div><span class="material-icons-outlined line3">menu</span></div>
+    </div>
+    <!-- left slide home basic -->
+    <div id="mainnav"></div>
+
+    <!-- left product slide -->
+    <div id="productNav"></div>
+
+    <!-- logim slide -->
+    <div class="loginslide"></div>
+
+    <!-- Container Part -->
+    <div id="container-cart">
+      <div class="cart-main">
+        <div class="cart-top">
+          <div class="cart-title">
+            <div class="shopping">
+              <h1>Shopping cart</h1>
+              <div><img src="./cart/arrow.svg" alt="" /></div>
+              <div class="printer"><img src="./cart/printer.svg" alt="" /></div>
+            </div>
+          </div>
+
+          <div id="main-wala" class="main-cart-details">
+            <!-- <div class="cart-details">
+              <div class="img-cart">
+                <img src="	https://secure.ikea.com/in/en/images/products/pax-wardrobe__0716359_PE730830_S3.JPG" alt="">
+              </div>
+              <div class="item-details">
+                <p>jsdfkjsd</p>
+                <p>jsdfkjsd</p>
+                <p>jsdfkjsd</p>
+                <p>jsdfkjsd</p>
+                <p>jsdfkjsd</p>
+                <p>jsdfkjsd</p>
+              </div>
+              <div class="price-item">
+                <p>sdnfjsdkn</p>
+
+                <div class="delete-button">
+                  <img src="./delete.png" alt="">
+                  <select name="" id="">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                </div>
+              </div>
+            </div> -->
+          </div>
+
+          
+
+          <div class="total-cart-price">
+            <p>Subtotal</p>
+            <p id="prc-cart">0</p>
+          </div>
+        </div>
+
+        <div class="cart-bottom">
+          <div class="retun-cart">
+            <img src="./cart/car-loan.svg" alt="" />
+            <div class="left-return">
+              <p>
+                <span class="big-p">Make the most of delivery </span>(order from
+                125Kg to 300Kg : Rs.1999)
+              </p>
+              <p>
+                The cost of delivery varies according to the weight of your
+                order.
+              </p>
+            </div>
+            <div class="right-return">
+              <p>Weight of your order: <span id="weight" class="big-p">0 </span></p>
+              <p>Remaining weight: <span id="rmg-weight" class="big-p">300 kg</span></p>
+            </div>
+          </div>
+          <div class="recieve">
+            <p>How would you like to receive your order?</p>
+            <div class="recieve-bottom">
+              <div class="one-r">
+                <img src="./cart/delivery-truck.svg" alt="" />
+                <p>Home delivery</p>
+              </div>
+              <div id="gocheck" class="two-r">
+                <img src="./cart/delivery-truck.svg" alt="" />
+                <p>Click & collect</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cart-main-bottom">
+        <div class="servise">
+          <img src="./cart/service-delivery.png" alt="" />
+          <div class="service-des">
+            <p>Our Delivery Servise</p>
+            <p>
+              Safe & contact-less delivery according to government permission.
+            </p>
+            <p><a>More info</a></p>
+          </div>
+        </div>
+
+        <div class="servise">
+          <img src="./cart/return-policy.png" alt="" />
+          <div class="service-des">
+            <p>Our Delivery Servise</p>
+            <p>
+              Safe & contact-less delivery according to government permission.
+            </p>
+            <p><a>More info</a></p>
+          </div>
+        </div>
+
+        <div class="servise">
+          <img src="./cart/assembly.png" alt="" />
+          <div class="service-des">
+            <p>Our Delivery Servise</p>
+            <p>
+              Safe & contact-less delivery according to government permission.
+            </p>
+            <p><a>More info</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer"></div>
+  </body>
+</html>
+
+<script type="module">
+  import nav from "./components/navbar/nav.js";
+  // console.log(nav);
+  document.getElementById("tnav").innerHTML = nav();
+
+  import left from "./components/side nav/homenav.js";
+  // console.log(left);
+  document.getElementById("mainnav").innerHTML = left();
+
+  document.querySelector(".line3").addEventListener("click", () => {
+    // document.querySelector(".main").style.display = "block";
+    // document.querySelector(".main").style.transform = "scaleX(1)";
+    document.querySelector(".main").style.transform = "translateX(0px)";
+  });
+  document.querySelector(".close").addEventListener("click", () => {
+    // document.querySelector(".main").style.display = "none";
+    // document.querySelector(".main").style.transform = "scaleX(0)";
+    document.querySelector(".main").style.transform = "translateX(-100%)";
+  });
+
+  // login slide append;
+  import login from "./components/login slide/login.js";
+  document.querySelector(".loginslide").innerHTML = login();
+
+  // login slide setup
+  document.querySelector(".person").addEventListener("click", function () {
+    // document.querySelector("#bordy").style.display = "block"
+
+    document.querySelector("#bordy").style.transform = "translateX(0)";
+    document.querySelector("#bordy").style.display = "block";
+    // document.querySelector("#bordy").style.width= "100%"
+  });
+  document.querySelector("#cros").addEventListener("click", function () {
+    // document.querySelector("#bordy").style.display = "none"
+
+    document.querySelector("#bordy").style.transform = "translateX(100%)";
+    document.querySelector("#bordy").style.display = "none";
+    // console.log(e)
+  });
+
+  // product nav append
+  import productnav from "./components/side nav/product nav.js";
+  // console.log(productnav);
+  document.getElementById("productNav").innerHTML = productnav();
+
+  // product nav slide setup
+  let pro = document.getElementById("pro");
+  pro.onclick = () => {
+    document.querySelector(".promain").style.transform = "translateX(0px)";
+  };
+  document.querySelector(".proclose").addEventListener("click", () => {
+    document.querySelector(".promain").style.transform = "translateX(-100%)";
+  });
+
+  let furn = document.getElementById("light");
+  furn.onclick = () => {
+    //   console.log("hello")
+    document.querySelector(".promain").style.width = "800px";
+    document.getElementById("sub-menu").style.display = "block";
+    document.querySelector(".procontent-toggle").style.marginLeft = "18%";
+  };
+  let light = document.getElementById("furn");
+  light.onclick = () => {
+    document.getElementById("sub-menu").innerHTML = `<div class="h1">
+  <h2>Furniture</h2>
+</div>
+<div class="h1-bottom">
+  <p>Shop all</p>
+</div>
+<div class="bottom-most">
+  <p>Gaming furniture
+  </p>
+  <p> <a id="fursets" href="product.html">Furniture sets</a> </p>
+  <p>Beds</p>
+  <p>Sofas & armchairs</p>
+  <p>Bookcase & shelving units</p>
+  <p>Tables & desks</p>
+  <p>Cabinets & cupboards</p>
+  <p>TV & media furniture</p>
+  <p>Chest of drawers & drawer units</p>
+  <p>Wardrobes</p>
+  <p>Chairs</p>
+  <p>Outdoor furniture</p>
+  <p>Sideboards,buffets & console tables</p>
+  <p>Children's furniture</p>
+  <p>Room dividers</p>
+  <p>Trolleys</p>
+  <p>Bar furniture</p>
+  <p>Armchairs & chaise longues</p>
+  <p>Cafe furniture</p>
+  <p>Nursery furniture</p>
+
+</div>`;
+    document.querySelector(".promain").style.width = "800px";
+    document.getElementById("sub-menu").style.display = "block";
+    document.querySelector(".procontent-toggle").style.marginLeft = "18%";
+  };
+
+  document.getElementById("logButton").addEventListener("click", () => {
+    window.location.href = "login.html";
+  });
+
+  document.getElementById("homelogin").addEventListener("click", () => {
+    window.location.href = "login home.html";
+  });
+  // footer part
+
+  
+  import footer from "./components/footer/footer.js"
+
+  document.getElementById("footer").innerHTML = footer();
+
+  document.getElementById("gocart").onclick = ()=>{
+    window.location.href = "cart.html"
+  }
+
+  // gohome
+  document.querySelector(".navlogo").addEventListener("click", ()=>{
+  window.location.href = "home.html"
+})
+</script>
+
+<script src="cart.js"></script>

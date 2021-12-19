@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link rel="icon" href="https://in.accounts.ikea.com/resources/in/favicon-16x16.png">
+    <title>Login - IKEA</title>
+    <style>
+       body{
+           margin: 0;
+           padding: 0;
+           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+       }
+        .leftLogin{
+            
+            width: 40%;
+            height: 740px;
+            
+            display: inline-block;
+            margin-left: 0px;
+           
+            background-color: rgb(0,88,163);
+            vertical-align: top;
+            
+        }
+        .rightLogin{
+            width: 59%;
+            height: 740px;
+            
+            display: inline-block;
+        }
+        #ikeaImage{
+            background-image: url("https://in.accounts.ikea.com/resources/static/logo.svg");
+            margin: auto;
+            height: 38px;
+            width: 88px;
+            margin-top: 35px;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        #leftLoginText{
+            margin-top: 80px;
+           margin-left: 190px;
+            width: 300px;
+            height: 250px;
+        }
+        .textHeading{
+            font-size: 30px;
+        font-weight: bold;
+        color: white;
+        }
+        .simpleText{
+           color: white;
+           font-size: 18px;
+            
+        }
+        #rightPart{
+            
+            margin-top: 50px;
+            width: 60%;
+            height: 80%;
+            margin-left: 90px;
+        }
+        .inputss{
+            border: none;
+            border-bottom: 1px solid grey;
+            width: 90%;
+            font-size: 17px;
+            outline: none;
+            
+
+        }
+        #buttonBlue{
+            background-color: #0058A3;
+            width: 90%;
+            height: 60px;
+            border-radius: 20px;
+            color: white;
+            margin-top: 35px;
+        }
+        #buttonBlue:hover{
+            background-color: #0d5391;
+            cursor: pointer;
+        }
+        .genText{
+            font-weight: bold;
+            font-size: 15px;
+            color: #111111;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        .genText:hover{
+            cursor: pointer;
+        }
+        .invButton{
+            border: none;
+            border-radius: 20px;
+            height: 60px;
+            width: 90%;
+            color: black;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        .invButton:hover{
+            cursor: pointer;
+            background-color: rgb(209, 209, 209);
+        }
+        #back{
+            margin-left: 10%;
+            height: 50px;
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+        }
+        #back:hover{
+            background-color: #0d5391;
+            cursor: pointer;
+        }
+        #back>span{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+        <!-- left  border --------------------------------------------------------------->
+    <div class = "leftLogin">
+        <div id = "ikeaImage"></div>
+        <div id="back"><span class="material-icons-outlined">arrow_back</span></div>
+        <div id = "leftLoginText">
+            <div class = "textHeading"><font color = "yellow">Login</font> To Your</div>
+            <div class = "textHeading">Ikea account.</div>
+            <br>
+            <div class = "simpleText">Too many passwords</div>
+            <div class = "simpleText">You can now login with an OTP we will</div>
+            <div class = "simpleText">send on your email address or verified</div>
+            <div class = "simpleText">mobile number.</div>
+            <br>
+            <div class = "simpleText">Access your IKEA account using your</div>
+            <div class = "simpleText">email address to add and verify your</div>
+            <div class = "simpleText">mobile number.</div>
+        </div>
+    </div>
+    <!-- left  border --------------------------------------------------------------->
+
+
+
+    <!-- right Border -------------------------------------------------------------------->
+    <div class = "rightLogin">
+        <div id = "rightPart">
+            <br>
+            <input id="username" type="text" placeholder="Email or Verified Mobile Number" class = "inputss">
+            
+            <div style="color: gray;margin-top: 5px;">Login <a href=""><font color = "black">with an OTP</font></a></div>
+            <br><br><br>
+            <input id="password" type="password" class = "inputss" placeholder="Password">
+            <div style="margin-top: 5px;"><a href = ""><font color = "black">Forget Your Password?</font></a></div>
+            <button id = "buttonBlue">Continue</button><br><br><br>
+            <div class = "genText">Do not have an IKEA account? Create one now:</div><br><br><br>
+           <button id="forhome" class = "invButton">I'm buying for my home</button><br><br><br>
+           <button class = "invButton">I'm buying for my company</button>
+        </div>
+    </div>
+     <!-- right Border -------------------------------------------------------------------->
+</div>
+
+</body>
+</html>
+
+<script>
+    document.getElementById("forhome").addEventListener("click", ()=>{
+        window.location.href = "login home.html"
+    })  
+    // login portion
+
+    document.querySelector("#buttonBlue").addEventListener("click", Login);
+  async function Login(){
+      console.log("Hello")
+        let login_data = {
+            username: document.getElementById("username").value,
+            password: document.getElementById("password").value
+        }
+
+        login_data = JSON.stringify(login_data);
+
+        //link 
+        let login_api = `https://masai-api-mocker.herokuapp.com/auth/login`
+
+        let response = await fetch(login_api, {
+            method: "POST",
+            body: login_data,
+            headers: {
+                "Content-type": "application/json"
+            }
+        });
+
+        let data = await response.json();
+        console.log(data)
+
+
+        let username = document.getElementById("username").value;
+        getProfile(username, data.token)
+    }
+
+    async function getProfile(username, token){
+        let api = `https://masai-api-mocker.herokuapp.com/user/${username}`;
+
+        let response = await fetch(api, {
+            // method: "POST",
+
+            headers: {
+                "Content-type": "application/json",
+                "Authorization": `Bearer ${token}`,
+            },
+            
+        });
+
+        let data = await response.json();
+        console.log("user data", data)
+        localStorage.setItem("ikea_user", JSON.stringify(data));
+
+
+        if(data.message == "Invalid token for user"){
+            alert(`Invalid token for user`)
+        }else{
+            alert(`Dear ${data.name} you logged in successfully`)
+        }
+    }
+
+    document.getElementById("back").onclick = ()=>{
+        window.location.href = "home.html"
+    }
+
+    // goto cart
+  document.getElementById("gocart").onclick = ()=>{
+    window.location.href = "cart.html"
+  }
+
+  
+</script>
