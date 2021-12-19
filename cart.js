@@ -242,3 +242,5 @@ function deleteitem(event) {
 }
 
 // console.log(priceTotal);
+
+

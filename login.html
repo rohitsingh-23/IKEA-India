@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-    <title>Document</title>
+    <link rel="icon" href="https://in.accounts.ikea.com/resources/in/favicon-16x16.png">
+    <title>Login - IKEA</title>
     <style>
        body{
            margin: 0;
@@ -221,19 +222,15 @@
         });
 
         let data = await response.json();
-        // let name = data.name.split(" ");
-        // let final = name.shift()
-        // localStorage.setItem("name", JSON.stringify(final));
-        // document.getElementById("userName").textContent = final
         console.log("user data", data)
         localStorage.setItem("ikea_user", JSON.stringify(data));
+
 
         if(data.message == "Invalid token for user"){
             alert(`Invalid token for user`)
         }else{
             alert(`Dear ${data.name} you logged in successfully`)
         }
-        
     }
 
     document.getElementById("back").onclick = ()=>{

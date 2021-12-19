@@ -19,7 +19,7 @@ function nav(){
         type="search"
         placeholder="What are you looking for?"
       />
-      <span class="material-icons-outlined navcamera"> photo_camera </span>
+      <span id="camera" class="material-icons-outlined navcamera"> photo_camera </span>
     </div>
     <div class="navlogin">
       <span class="material-icons-outlined"> local_shipping </span>
