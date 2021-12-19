@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/07381c3866.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        .dropdown-btn {
+  padding: 6px 30px 6px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 550;
+  display: block;
+  border: none;
+  border-top: 1px solid grey;
+  background: none;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  margin-top: 370px;
+  padding-top: 30px;
+
+}
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+  /* padding-top: 10px; */
+}
+.dropdown-container {
+  display: none;
+  margin-top: 30px;
+  /* padding-left: 8px; */
+  padding-left: 18px;
+}
+#meas-nav{
+    width: 500px;
+    height: 100vh;
+    overflow-y: scroll;
+    border: 1px solid red;
+    position: absolute;
+    background-color: white;
+    z-index: 10;
+    top: 0;
+    right: 0;
+ 
+    display: block;
+    margin-top: -15px;
+    transform: translateX(-100%);
+    transform-origin: right;
+    transition: transform 500ms ease-in;
+}
+.meas-p p, .meas-third p{
+    font-size: 15px;
+    font-weight: 600;
+}
+.meas-p span, .meas-third span{
+    font-weight: 400;
+}
+#first{
+    padding-left: 30px;
+}
+.meas-img{
+    width: 350px;
+    height: 350px;
+    border: 1px solid red;
+    padding-left: 30px;
+}
+.meas-img img{
+    width: 100%;
+    height: 100%;
+}
+.meas-list{
+    padding-left: 30px;
+}
+.meas-fst div{
+    margin-bottom: -14px;
+}
+.meas-sec div{
+    margin-top: -10px;
+    border: 1px solid black;
+    width: 100px;
+    height: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 3px;
+}
+.meas-sec p{
+    font-size: 13px;
+}
+.meas-third{
+    margin-top: 40px;
+}
+.meas-third p {
+    line-height: 0.3;
+}
+.meas-both{
+    margin-top: 50px;
+}
+.close {
+  border: 1px solid red;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+ 
+  align-items: center;
+  margin-left: 80%;
+}
+.close ion-icon {
+  height: 25px;
+  width: 25px;
+}
+    </style>
+</head>
+<body>
+    <div id="hii">Hii</div>
+    <div id="meas-nav">
+        <div class="close"><ion-icon name="close-outline"></ion-icon></div>
+        <div id="first">
+            <h1>Measurements </h1>
+          <div class="meas-p">
+            <p>Length: <span> 125 cm (49 1/4 ")</span></p>
+            <p>Width: <span> 75 cm (29 1/2 ")</span></p>
+            <p>Height: <span> 74 cm (29 1/8 ")</span></p>
+          </div>
+        </div>
+        <div class="meas-img">
+            <img src="https://www.ikea.com/in/en/images/products/melltorp-adde-table-and-4-chairs-white-black__0976365_pe813152_s5.jpg?f=xs" alt="" srcset="">
+            <img src="https://www.ikea.com/in/en/images/products/melltorp-adde-table-and-4-chairs-white-black__0947776_pe798637_s5.jpg?f=xs" alt="" srcset="">
+        </div>
+        <div class="meas-list">
+            <button class="dropdown-btn">Packaging
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-container">
+               <p>This product comes as 6 packages.</p>
+               <div class="meas-fst">
+                   <div><h4>MELLTORP</h4></div>
+                   <p>Table top</p>
+                </div>
+                <div class="meas-sec">
+                   <p>Article no</p>
+                    <div>803.657.36</div>
+                 </div>
+    
+                 <div class="meas-third">
+                     <p>Width:<span> 77 cm (30 ¼ ")</span></p>
+                     <p>Height:<span> 2 cm (¾ ")</span></p>
+                     <p>Length:<span> 131 cm (51 ½ ")</span></p>
+                     <p>Weight: <span> 12.25 kg (27 lb 0 oz)</span></p>
+                     <p>Package(s):  <span>1</span></p>
+                 </div>
+
+                 <div class="meas-both">
+                    <div class="meas-fst">
+                        <div><h4>MELLTORP</h4></div>
+                        <p>Underframe</p>
+                     </div>
+                     <div class="meas-sec">
+                        <p>Article no</p>
+                         <div>702.801.01</div>
+                      </div>
+         
+                      <div class="meas-third">
+                          <p>Width:<span>13 cm (5 ")</span></p>
+                          <p>Height:<span> 6 cm (2 ½ ")</span></p>
+                          <p>Length:<span>147 cm (57 ¾ ")</span></p>
+                          <p>Weight: <span> 9.52 kg (21 lb 0 oz)</span></p>
+                          <p>Package(s):  <span>1</span></p>
+                      </div>
+                 </div>
+                 <div class="meas-both">
+                    <div class="meas-fst">
+                        <div><h4>ADDE</h4></div>
+                        <p>Chair</p>
+                     </div>
+                     <div class="meas-sec">
+                        <p>Article no</p>
+                         <div>702.142.86</div>
+                      </div>
+         
+                      <div class="meas-third">
+                          <p>Width:<span>  50 cm (19 ¾ ")</span></p>
+                          <p>Height:<span> 8 cm (3 ")</span></p>
+                          <p>Length:<span>76 cm (29 ¾ ")</span></p>
+                          <p>Weight: <span> 2.76 kg (6 lb 1 oz)</span></p>
+                          <p>Package(s):  <span>4</span></p>
+                      </div>
+                 </div>
+               </div>
+              </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+  var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    // this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+
+let hi = document.getElementById('hii');
+hi.onclick = ()=>{
+    document.querySelector("#meas-nav").style.transform = "translateX(0px)";
+}
+
+document.querySelector(".close").addEventListener("click", ()=>{
+    // document.querySelector(".main").style.display = "none";
+    // document.querySelector(".main").style.transform = "scaleX(0)";
+    document.querySelector("#meas-nav").style.transform = "translateX(-100%)";
+  })
+</script>
