@@ -3,14 +3,6 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-body {
-  width: 65.1%;
-  /* border: 1px solid red; */
-  min-height: 100vh;
-  margin: auto;
-  margin-top: 15px;
-}
-
 a {
   text-decoration: none;
   color: teal;
@@ -18,6 +10,14 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+body {
+  width: 65.1%;
+  /* border: 1px solid red; */
+  min-height: 100vh;
+  margin: auto;
+  margin-top: 15px;
 }
 
 p {
@@ -95,7 +95,7 @@ h4 {
 }
 
 .product {
-  /* border: 1px solid red; */
+  border: 1px solid red;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
